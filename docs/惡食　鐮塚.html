@@ -1,0 +1,5730 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="惡食　鐮塚">
+<meta property="og:description" content="">
+<title>惡食　鐮塚</title>
+<style>
+h1{ color:white; margin: 5px 0; }
+body{ background:#454752; }
+._subtitle { color:#ddd; margin:5px 0 20px 0; }
+._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
+._hidden { display:none; }
+
+/* 主容器：垂直排列 */
+.center { 
+  display:flex; 
+  flex-direction:column; 
+  align-items:flex-start; 
+}
+
+#_main { display:flex; flex-direction:column; align-items:end; }
+
+/* ★ 所有 script 區塊置中（title / talk 共用） */
+._script {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+._halt { padding:30px 0; }
+._bgImg { text-align: center; }
+._bgImg img { max-width: 800px; }
+
+/* talk 本體 */
+._talk {
+  margin:5px 0;
+  display:flex;
+  border:1px solid black;
+  background:#1e1e1e;
+  color:#eee;
+  width:100%;
+  max-width:1080px;
+  border-radius:5px;
+}
+
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+
+._actorName{
+  padding:5px 10px;
+  height:20px;
+  font-size:18px;
+}
+
+._actorImg {
+  margin:6px;
+  width:110px;
+  height:110px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:#2a2a2a;
+}
+
+._actorWords {
+  margin:5px;
+  background:#2a2a2a;
+  font-size:1.1rem;
+  padding:10px;
+  height:calc(100% - 60px);
+  border-radius:5px;
+}
+
+._sectTitle { border-radius:5px; margin-bottom:5px; }
+
+/* ===== noImg 處理 ===== */
+._talk.noImg {
+  display: block;
+  margin: 5px 0;           /* ★ 與一般 talk 間距一致 */
+}
+
+._talk.noImg ._leftCol { display: none; }
+._talk.noImg ._rightCol { width: 100%; }
+._talk.noImg ._actorImg { display: none; }
+
+/* ===== RWD ===== */
+@media only screen and (max-width: 400px) {
+  ._leftCol { width:100px; }
+  ._rightCol { width:calc(100% - 100px); }
+  ._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
+}
+
+/* 其他頻道（目前隱藏） */
+._talk.otherCh {
+  width:calc(50%);
+  text-align:right;
+  margin-left:auto;
+}
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
+._talk.otherCh ._actorWords { background:black;color:white; }
+
+/* 純圖片 */
+._talk.imgOnly ._imgOnlyWrap {
+  width: calc(90%);
+  margin: 6px;
+  background: #2a2a2a;
+}
+._talk.imgOnly ._imgOnlyWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== 區段標題框 ===== */
+._script[data-type="title"] ._titleBox {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 10px 15px;
+  margin: 30px 0 0 0;     /* 上距較大，下距貼近 talk */
+  border-radius: 5px;
+  border: 1px solid #555;
+  text-align: left;
+  width: 100%;
+  max-width: 1080px;
+  box-sizing: border-box;
+}
+
+/* 自定義生成 */
+._actor_0 ._actorName { color: #888888; }
+._actor_0 ._actorName::after { content:" "; }
+._actor_0 ._actorImg { background-image:url(); }
+
+._actor_1 ._actorName { color: #00bcd4; }
+._actor_1 ._actorName::after { content:"毛茸茸的KP"; }
+._actor_1 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/ofAVLJiHnBU9EwUbrOYOjr7vLRt1/files/533702ae41bb8e7197a777228039947d75d4d8ca9bb04efa10ab096c10be54f9"); }
+
+._actor_2 ._actorName { color: #e91e63; }
+._actor_2 ._actorName::after { content:"？？？"; }
+._actor_2 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/ofAVLJiHnBU9EwUbrOYOjr7vLRt1/files/846580d31d8a212de42b2b3b1caf3808e5f22a1ebc124508d2f3e3ba97e05fd2"); }
+
+._actor_3 ._actorName { color: #02df82; }
+._actor_3 ._actorName::after { content:"鐮塚 綠"; }
+._actor_3 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/IKmizM0ehtWKZw9Mxw5ubJAyhrQ2/files/4058126d1e4b7e95d4de7f33ec77a1604264aab3485c717758af3840a76c9307"); }
+
+._actor_4 ._actorName { color: #888888; }
+._actor_4 ._actorName::after { content:"　"; }
+
+._actor_5 ._actorName { color: #e91e63; }
+._actor_5 ._actorName::after { content:"喰代 唯"; }
+._actor_5 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/ofAVLJiHnBU9EwUbrOYOjr7vLRt1/files/846580d31d8a212de42b2b3b1caf3808e5f22a1ebc124508d2f3e3ba97e05fd2"); }
+
+._actor_6 ._actorName { color: #607d8b; }
+._actor_6 ._actorName::after { content:"關於肉泥的筆記"; }
+
+._actor_7 ._actorName { color: #607d8b; }
+._actor_7 ._actorName::after { content:"關於簡易版〈治癒術〉"; }
+
+._actor_8 ._actorName { color: #607d8b; }
+._actor_8 ._actorName::after { content:"PL向情報"; }
+
+._actor_9 ._actorName { color: #607d8b; }
+._actor_9 ._actorName::after { content:"____"; }
+
+
+
+.otherCh{ display:none; }
+</style>
+</head>
+<body class="center">
+<div class="_hidden">
+<version>hazmole_v1.0</version>
+</div>
+<body class="center">
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">惡食　鐮塚</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">主頻道</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你睜開眼睛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">第一眼看見的是地板。<br>顯然，自己現在躺在地板上。 <br><br>稍微移動視線，你明白這里並不是自己家。<br>是不認識的房間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不知道是從哪里傳來的，像是在時尚的咖啡館一樣，你聽見了舒緩的爵士樂。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在悠揚的樂聲中。<br><br>嚓。<br>傳來了金屬碰撞音，你順著聲音將視線移過去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">前方有一張餐桌，一個男性在那里獨自用餐。   <br><br>男人使用著刀叉，大小不甚優雅的肉塊塞滿了嘴巴。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他默默地將肉送到嘴中，不斷地重覆咀嚼。 <br><br>每咬一口都露出欣喜若狂的笑容，你的注意力被這個男人所吸引。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那絕對不是漂亮的吃法，可對你來說，這頓飯菜優雅得令人難以置信。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">男人察覺到你的視線，停下了向嘴運送肉的手，對你投以微笑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">- CoC 惡食 -</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」自己怎麼出現在這裡的，完全沒有頭緒......<br>這種被他人剝奪記憶這種事，也不是第一次了。<br>並不是非常陌生。<br><br>「我跟你認識嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯…你應該是不認識我。」男子看了下還躺在地上的你，又繼續分切著盤子裡的肉塊，「不過我認識你。」<br><br>這麼說著，但好像沒有要詳細說明的樣子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......這樣啊。」綠勉強的擠了個笑容，但實際上看起來十分的落寞。<br><br>「你是因為之前的事件認識的吧？」<br>「那麼、請問找我有什麼事嗎？」順勢看著自己身處的環境還有身體狀態。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「喔不是，應該也不是你想的那樣。」插起另一塊色澤飽滿的肉，他眨眨眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你看了下自己的身體。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">根本不需要特別觀察什麼的，那是再明顯不過的地方了。<br><br>本來是兩腿的地方，有一處是能直接看見地板的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">…地板？腿呢？ <br><br>無法理解狀況，你再次檢查自己的腳下和下半身。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">左腿，有。<br>右腿，沒有。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">本應一直存在的右腿，從大腿根部開始徹底消失了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看錯了吧，就算伸出手去觸碰原來是右腿的地方，果然那里什麽都不存在。 <br><br>似乎打了某種麻醉，不可思議地完全不痛，但毫無疑問，有一隻腿不見了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 1d4/1d6+1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=45 【SAN CHECK】 (1D100&lt;=45) ＞ 21 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D4 (1D4) ＞ 2</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 45 → 43</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">愕然，但好像沒有想像中的驚恐。<br>完全搞不明白。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「！」原本很驚訝的、原本屬於身體的一部份就這樣消失了......<br><br>睜大了雙眼，不可置信、<br><br>啊，但在那種時候，早就該失去了吧？<br>在滿是鮮花的屍體面前，自己舉起槍時，對著喜歡崇拜的人說著尋死的誓言時、<br><br>這個世界早就容不下自己了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......你要殺了我嗎？希望你可以不要太折磨我。」<br><br>他笑著與對方說道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">食人族......<br><br>跟製作出食人植物的自己有什麼不同嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「殺了你？為什麼要那麼做？」他看起來很疑惑的樣子，隨後放下了手中的刀叉。<br><br>起身，他走到了你的旁邊，蹲下來看著你。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「猜錯囉，找你是有別的事情。」一手撐著地，他撫下身，另一手摸上你已經再無右腳的大腿根部。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他的指尖觸碰了斷面，像是雨點一樣，一點一滴地遊走。<br><br>奇怪的是，回傳給你的並非疼痛，而視神經被直接撫摸似的…快感？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他很快又抽回手，笑盈盈地看著你。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」以往零課就是負責解決一些奇異事件的，擔任要職時也經歷過不少大風大浪。<br><br>但這樣子的傢伙還是第一次看到，是下藥嗎......<br><br>這是一種特殊癖好......？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊，抱歉，躺在這裡應該不太舒服吧。」意識到了什麼，他突然伸出手，就這麼將你抱了起來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這麼說著，他將你抱到餐椅上坐好。<br><br>隨後自己則回到對面，原本坐著的位置和你面對面。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就目前而言，應該可以試著進行對話。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br><br>警察的經驗告訴自己面對犯人的時候，不應該隨便挑釁，而是從旁推敲對話其中找到擊破點，好打破對方的心理防線。<br><br>但庭師的記憶一直汙染著思考，像迂迴不停的河流一樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br><br>但、還有人在等著自己回去、<br>真的要隨便這樣放棄死去嗎？<br><br>「你、嗯......我們在哪裡認識的？」<br>綠勉強吐出了一句話，彷彿就像一根倒刺深深卡在喉嚨裡，花了好大的力氣才拔出。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「真是個好問題，」嚼著肉，他在完全吞下去後才接續開口，「就跟剛剛說的一樣，只有我單方面的認識你而已。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「說是認識可能也不太對，我就是遠遠的看著你而已。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這樣......」......跟蹤狂嗎？<br><br>感覺只要稍有不慎，就會被弄死吧……既然如此，不如在臨死前，好好賭上一把吧，讓對方被逮捕，世界上也會少一個變態。<br><br>「那要不要讓我認識你呢？」綠重新拾回了那個假象的笑容，看著對方說道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「當然。」聽到你這麼說，他好像挺開心的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「喰代 唯，25歲單身，初次見面。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你的名字呢？ 綠君。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看起來根本已經掌握了你的身份證之類的東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這不是已經唸出來了嗎？<br>綠瞇著眼睛、嘴角上揚。<br><br>「鐮塚綠、26歲。」<br><br>單不單身不重要了吧，反正也沒有人真的需要自己。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他笑著點點頭。<br><br>「你看起來真的很冷靜呢，真有意思。」他露出了新奇似的神色，對你滿是好奇，「你理解現在的情況嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">嗯......<br>我才想問我看不出來嗎？<br><br>「唯君希望我慌張一點嗎？」<br>處在這種環境，如果不夠冷靜都會正中犯人的下懷就是了。<br><br>但一方面是因為自己對面臨死亡也沒有任何感覺吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「倒也不是，只是大部分面對這種情況，好像都會很慌張，所以稍微有點驚訝。」他偏了下頭，又繼續吃著自己的餐點。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊對了，你肚子餓了嗎？要吃一點嗎？」他的叉子輕輕滑過盤面上的醬料。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">大部分面對這種情況慌張，代表他已經預設過或者是不是第一次了嗎......？<br><br>看著他眼前的食物，自己可以說是毫無食慾。<br>完全沒有胃口、噁心......<br><br>身為同樣都帶著罪的人......<br><br>「......嗯，可以啊，唯君你在吃些什麼呢？」<br>雖然大致上已經有猜想就是了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我在吃的是今天的午餐。」<br>他瞇起眼，露出了相當愉快的表情。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「今天的午餐啊…」<br>他自顧自地繼續說著，笑意漸深。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「今天就暫時先保持簡單。用香草鹽少許調味，用橄欖油和黃油烹煎。要享受原汁原味的口感，果然這麽處理肉是最棒的。也要注意火候的大小，讓肉好好休息可是很重要的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看樣子是在對眼前的料理進行說明，你已經稍微猜測了是什麼，但他只是普普通通地描述著。<br><br>男人毫不在乎地繼續下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我的語言力很低，沒有恰當的詞語能夠中肯地描述這種美味。你的腿肉…怎麽說呢，非常鮮嫩，非常美味。太容易上癮了。或許下次試試烘烤也不錯。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「看你的表情好像已經知道了吶，沒錯，你的右腳就在這裡。」<br>他輕輕戳了戳盤裡剩下的肉，他眉飛色舞地告訴你。  <br><br>這個男人現在，正在吃自己的右腿。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 1d4/1d6+1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=43 【SAN CHECK】 (1D100&lt;=43) ＞ 67 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D6+1 (1D6+1) ＞ 3[3]+1 ＞ 4</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 43 → 39</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「吶，綠君…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我還想要再來一份…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不，一份肯定是不夠的吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「還需要更多才行。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「更多…更多…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">野獸似的眼睛閃著光，直勾勾地捉住了你。 <br><br>奇怪的行徑跟表情扭曲了視野，你驟然停止思考。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不知道大腦仿佛拒絕理解這一切，還是有別的理由…<br><br>你的意識陡然墜落。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">睜開雙眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">感覺做了詭異的噩夢，全身都黏糊糊的，汗流浹背。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">首先映入眼簾的是不認識的天花板。稍微移動視線，能發現自己躺在不認識的床上面。 <br><br>…不，這不是夢啊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你仍然是單腿的狀態。<br><br>環視房間能發現，除自己以外沒有別人了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【靈感 】檢定</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=18*5 【INT X 5】 (1D100&lt;=90) ＞ 41 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">照這種情形，可以推斷是大概是被綁架監禁了。<br><br>不過你身上沒有任何的拘束或限制，像是根本不擔心你會跑走一樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查地點<br>【 房間整體 / 床 / 床頭櫃 / 自己  】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」有點不想動了、好累。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br><br>反正也逃不走吧，這樣。<br>對方看起來也有些奇怪，如果硬是逃跑的話應該會招來反效果。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">躺在床上......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你呈現了一個軟爛的狀態，就繼續躺在床上。<br><br>床大致上蠻乾淨的，軟軟的很舒服，不過好些地方沾上了紅色的污漬。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">......<br>會有人來救自己嗎？<br><br>躺著的時候看向自己的身體。(視野能見)</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【自己】<br>身上的衣服不知何時被換掉了，並不是平時穿的。 <br>並且還是沒有左腿。<br><br>隱約可以包裹在左腿斷面的繃帶，依舊不痛，似乎是某種麻醉在起作用。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【靈感 or 現實靈感】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=90 【靈感】 (1D100&lt;=90) ＞ 37 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不對。<br>在失去意識之前缺失的確實是右腿才對，不是左腿。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC  0/1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=39 【SAN CHECK】 (1D100&lt;=39) ＞ 60 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 39 → 38</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你望著自己消失的左腿處，憶起失去意識前的畫面。<br><br>那傢伙看起來就是想要吃掉自己，並因此異常興奮。<br>明明是很可怕的行為，但你卻沒有感覺很糟糕。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」記憶又產生錯亂了嗎、真是......<br>跟那時候簡直一模一樣。<br><br>「難道我也被激發什麼奇怪的癖好了嗎......」自言自語。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">繼續躺著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你躺了不知道過了多久，聽到了門外的腳步聲。<br><br>門打開了，沒聽到開鎖的聲音，看起來也沒鎖門什麼的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯？這不是醒著嗎？早上好，綠君。」<br>他走進了房間，來到了床邊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>他稍微楞了一下，隨後深吸了一口氣，努力撐起身體，勉強坐了起來。<br><br>「早安，唯君。」回以對方一個笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你坐起身，現在可以看到他以及整個房間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【房間整體】<br>和最初的房間不一樣，似乎是臥室的樣子。<br>相應的更具有生活感，可能是他的寢室吧。<br><br>此外，房間沒有窗戶，只有一扇門。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「看起來能靠自己坐起來，太好了。」打量了一下你的狀況，他笑著在你旁邊的床緣坐了下來，「不過腿的感覺還沒回來吧，不要勉強做一些大動作比較好。」<br><br>他用著溫柔的話語，關心著你。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「因為昨天就那樣昏厥了，所以都還沒有好好地說點什麽呢。」<br><br>語落，他湊在你的面前，他看起來對你充滿興趣的樣子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「既然已經醒了，那問題就解決了，繼續自我介紹吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">昨天不是自我介紹過了嗎？......<br>原來那樣不算嗎？<br><br>啊、不能太相信自己記憶，都是因為那次事故害得自己已經沒辦法確信什麼是真的、什麼又是捏造的。<br><br>「......從名字開始嗎？」試探看看好了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">雖然剛剛已經互叫過名字了就是了......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「名字已經知道了不是嗎？當然是別部分。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「像是…你喜歡的食物？或是討厭的食物？」他稍微退開一些，好好地坐在你前面。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」換綠再次愣住。<br>喜歡什麼......討厭什麼......<br>啊、.......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我沒有特別喜歡的、也沒有特別討厭的，唯君呢？」揚起笑容的自己，用著溫柔的語調反問著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「沒有特別的偏好，這樣啊…」想了下，他也愉快的跟你分享，「我喜歡人類，討厭的話…化工感很重的調味料或是醬料吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">......這傢伙講話方式跟庭師一樣啊？<br>大概是有嚴重的偏執症、模仿犯吧。<br><br>「這樣啊，不過這世界人類很多呢......」<br>「怎麼會選我來這呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「因為你很特別，跟其他人都不一樣。」沒什麼猶豫或思考，很自然地回答了你，「我從來沒有遇到過像你這樣的人。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">很爛的人嗎？<br>心裡想著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「更直白來說，綠君你很美味呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「人肉啊，有不同的味道，有些人嚐起來味道比較酸，有些肉質比較硬，有些人的肉鬆鬆軟軟的，各式各樣的肉都有。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「但是像你一樣美味的人類還挺稀少喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「佳餚，這一類的感覺吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>身為警察的意識讓自己打從心底對眼前的傢伙感到極度的、<br><br>噁心、不適。<br><br>輕易地將人類貶低為可隨意處置的食材......<br>無法理解、要怎樣才可以達到這種扭曲的病態心理。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我明白了、唯君想要吃我，而我是被捕食的食物，這樣子......」綠色的瞳孔瞇成了一直線，笑容不減，「真是個特殊的興趣呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「雖然這樣理解也是對的，但我並不會把綠君定義為單純的食物，而是佳餚喔。」他似乎刻意強調了這部分，也許在他的理解裡，這是截然不同的類別。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那麼換我提問了，綠君有什麼愛好嗎？靜態的興趣、動態的活動？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=38 【SAN CHECK】 (1D100&lt;=38) ＞ 39 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D4 (1D4) ＞ 3</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 38 → 35</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「興趣......」想起了那些自己所照顧的植物、屍體上盛開的百花。<br>綠難得沉靜的表情轉變為驚恐，他身子一直顫抖。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......我、我......」他好像害怕到說不出來自己的興趣是什麼，只是掩著嘴。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">注意到你的情況，他又一次靠近了你，伸出雙臂，緩緩地抱住了你，然後輕輕地摸了摸你的頭、順著髮。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「會感到害怕地話，不回答也沒關係的，沒事的…」<br>像是在和小孩子對話一樣，他輕柔地說著。<br><br>也許這突如其來的行徑，你在不知不覺中忘記恐懼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">然後他就又退了回去，像是什麼事情也沒發生般。<br><br>「抱歉，讓我們換個話題吧。」他帶著歉意說道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 89 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」腦中一片混亂，完全不知道該說些什麼，又或者是，根本還能說些什麼。<br><br>眼前的對象，毫無疑問是個犯人、而且已經對自己造成了傷害......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沒有做出反抗的舉動，雖然心裡告訴自己，假意順著犯人是一種解決犯罪心理的方式之一，但實際上，無非是為了給自己的無力感找個藉口罷了。<br><br>這只是一種自私的溫柔。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「換一個吧......」還沒從情緒中回復過來，臉色有些陰沉。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那…綠君平常是會運動的類型嗎？」他似乎斟酌了一下話題，「先說我自己好了，我對運動沒甚麼興趣，不過大概還挺擅長體育的，對力量還蠻有自信的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「可以來比腕力喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 52 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......」他倒吸了一口氣，試著讓那些那些殘留在腦海的記憶盡量淡去，「平常、不會呢......」<br><br>犯人、犯人......<br>讓受害者對加害者產生出憐憫的情緒，自己非常明白，這是非常不利的事情。<br><br>但剛剛差點一度的陷入了......<br>啊不過這有什麼差嗎，反正......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">自己再怎麼努力，也不會有什麼改變的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">雖然沉默占了大多數時間、雖然最終只有短短的回應，但他始終帶著淺笑望著你，仔細聆聽。<br><br>全神專注在你身上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看你好像沒有想問問題的樣子，他又繼續提問了：「綠君會喝酒嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 62 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這倒是會......」還是無法平復自己的情緒，只能先選擇閉上眼冷靜一下。<br><br>過幾秒，才緩慢將翠綠色的雙瞳睜開。<br>「換我問問題了......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唯君、你會放我走嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果不會的話，可以在這裡把我殺了嗎，反正你也是想享用我吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「以目前的情況來看的話，抱歉，還沒有辦法讓綠君離開呢。」臉上的笑容不變，他的表情就像是「果然還是會問這個問題」似的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「但也不能讓綠君就這樣死在這裡，因為有事情想要拜託你呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果能達成我的請求，除了讓綠君死掉以外，都是可以談的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......什麼請求呢？」聽到後，眼睛稍微亮了一些。<br><br>綁架犯的心理第二階段嗎，看起來是能聽聽看這傢伙到底目的是什麼了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，不過在聆聽我的請求之前，先給你看看好了。」<br>他們這說著，起身離開了房間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">數分鐘後，他拿著一大包東西回來了。<br>似乎是，巨大真空袋之類的東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個。」說著，他從袋子里取出某種純白的，看起來軟乎乎的東西。<br><br>仔細觀察的話，隱約能看到像是血管一樣的東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個呢，是我從很偉大的人那邊借來的東西。」他輕輕晃了晃手上的東西，「細節說起來有點複雜，就不說了，總之用這個貼在缺失的部分上，被切斷的四肢就會恢復原樣啦。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這種事情怎麽可能實現。<br>雖然想這麽說，但事實是，一開始缺失的右腿還存在著。<br><br>看來並不是記憶錯亂。<br>不過，這個不現實的事實還是會讓人感到驚訝。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 0/1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=35 【SAN CHECK】 (1D100&lt;=35) ＞ 60 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 35 → 34</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就是這樣，失去的四肢都能夠長回來，所以不用太過擔心。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「以這個為基礎，下面開始就是我的請求了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在你還在理解狀況的時候，他將那東西收回袋子哩，轉而伸手握住你的手，歪頭端詳你的臉。<br><br>薄薄張開的嘴之間能看見尖銳的獠牙和赤紅的舌頭。<br>他瞇起眼睛，舔了舔嘴唇。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我說綠君，往後的餘生，都做我的佳餚好不好？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">話語回響著，甜美低沈的語調中沒有一絲虛假。<br>你望著他充斥瘋狂的雙眼，深信不疑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 93 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">說些什麼？？？？？？？？？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「意思是，就像是......永動機那樣？」<br><br>開什麼玩笑、要被迫受這種事情......<br><br>......啊，不過比起外面的世界，會不會墜落到這種看不見希望的黑暗......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......你是人類嗎？」<br>嗯，雖然大致上有些頭緒、<br>但仔細想想，這些事情都不是普通人類能辦到的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，可以說是就像永動機那樣，但偶爾還是要補充點材料進去。」他補充道，握著你的手傳來溫暖的體溫。<br><br>「我是人類喔。」肯定地點點頭。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">大概是注意到你的猶豫，他「啪」一下子又放開了手。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘛，這麼重要的事情，不可能立刻回答的了吧，」<br>「必須要有考慮的時間，對吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「等綠君決定答案之後要告訴我喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」等你講到一半時，他拉住了你的手。<br>「無所謂。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「反正沒人需要我了，不過你需要我對吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他看起來很驚訝，愣了好一會。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我需要綠君喔。」他緩慢但清晰地說著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「能夠答應我的請求，我也會溫柔的對待綠君的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......」他垂下了眼眸，<br><br>地球依舊在轉動，日夜依然在變化。<br><br>在植物佈滿的那一刻，在前輩死亡時候早就被下了宣言。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這裡還有人需要自己，<br><br>聽到這些話，其實還是有些開心的、至少，安慰到了自己一些。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他望著你，似乎思考了什麼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「謝謝你，綠君。」牽著你的手，他露出開心的笑容，那笑容沒有一絲虛假，像孩子般天真燦爛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「既然這件事順利解決了，我們也差不多該吃午餐了吧？」<br>「綠君昨天，什麼都沒吃不是嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在他這麼說的同時，你這才意識到了空腹感。<br><br>不過現在的心情真的能享受食物嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘛，看見食物的話或許就餓了，總之先去餐廳吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沒等你的反應，他高興地又將少了一隻腿的你打橫抱起，輕輕鬆鬆的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們就這樣離開房間，前往你已經看過一次的餐廳，他輕柔地將你放在椅子上入座。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「馬上就做好了，稍微等一下喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他這麽說著，向著大概是廚房的方向走去。<br> <br>在此期間應該可以稍微看看這個房間，如果你想的話…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">廚房也沒多遠，大聲說話的話，他應該還是聽的到的吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查地點<br>【 房間整體 / 客廳 / 餐廳 / 廚房】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">稍微看看這間房間。<br>但沒有移動，就是四周這樣看看。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【房間整體 】<br>這里是最初醒來的房間。<br>因為被擺放在另一個座位上，這時候還能看到客廳跟廚房。<br><br>就像之前所說的，可以在廚房看見他的身影。 <br>此外，可以看見和臥室門不一樣的另一扇門。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">附帶情報【客廳 】<br><br>液晶電視開著。<br>看上去剛開始播放午後的新聞報道。<br> <br>報道內容是關於失蹤案件的。<br>旁邊還有張十分眼熟的臉。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《靈感》</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=90 【靈感】 (1D100&lt;=90) ＞ 96 ＞ 致命性失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這是…誰啊？(癡呆)</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">總之，警方沒有掌握多少情報，看上去調查工作十分困難。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看著那張臉，理所當然的、是知道的吧？<br>但不願意去承認、內心不想接受、<br>.......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瞄一下廚房。<br>瞄幾眼而已。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【廚房】<br>這是一個相當幹凈的廚房。<br>可以看到喰代在裡面走來走去的忙碌身影，以熟稔、堪稱專業的動作製作料理。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">角度有點被遮擋到了，但你也注意到應該是角落的地方好像有一個相當大的密封袋。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">剛好瞥見了你的視線，他跟著你望向了那個密封袋。<br><br>「在看那個嗎？現在在鹽漬中呢，這還是我第一次做，不知道會不會好吃，真期待。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那是帶骨燻火腿來著，嗯，是你的左腿喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 1/1d4</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=34 【SAN CHECK】 (1D100&lt;=34) ＞ 95 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D4 (1D4) ＞ 1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 34 → 33</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他的目光又回到你身上，喜孜孜的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">被看著，作為獵物。<br>作為佳餚，被他所渴求著。 <br><br>為什麽這個事實讓胸口…有點躁動呢。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......你想吃我是可以，不過我可以吃別的東西嗎？」淡淡的口氣，雖然聽到還是有些震驚......<br><br>但、但......<br>算了。<br><br>這肯定是害死前輩的報應。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「喔…綠君的那份跟我的不太一樣，可以期待一下。」聞言，他又回過頭看了下你，故作神祕。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」不太一樣......<br>沒有回應，只是投以有些冷淡的眼光給對方。<br><br>「我會期待的。」並不會就是了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">過了一會，他終於做完了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他一趟趟端著完成的料理，擺放到你的眼前。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">現在，在你面前的是牛肉燉菜和白麵，什錦水果沙拉，最後是一杯豆漿。<br><br>空氣中飄蕩著美味的香氣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">飢腸轆轆的你不由自主地咽了咽快要流出來的口水。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「請慢用。」他向著你舉起手示意，然後坐到你的對面，擺上自己的那一份肉。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」會下毒嗎？還是......<br>不對，如果有下毒的話就正合自己意了。<br><br>早就有這種決心的綠，伸出手拿起了餐具。<br>「嗯......我開動了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">…雖然不想承認但很美味。<br><br>這是絕對是不輸給餐廳味道的美食。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SAN 恢復 1d3</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D3 (1D3) ＞ 3</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 33 → 36</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......很好吃。」他只是緩緩地吃了幾口，然後很安靜。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你喜歡就好。」滿意地笑著，他吃著自己的那份肉，「這些都是能夠補充鐵質的料理，能夠防止貧血。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「取下四肢雖然不會痛，但會流很多血。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果可以的話，還是要多補充體力才行。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」神經病。<br><br>內心還是浮現了這種想法，但綠沒有講出口。<br>他只是乖乖地吃了好幾口，然後視線飄到了對方身上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就跟一開始你見到他的情況相同，他品嚐著你的肉，相當滿足的樣子。<br><br>優雅的一口接著一口。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">跟你有著幾次眼神交會，不論你帶著什麼樣的目光或是平淡地看著，望向你的目光從來沒有變過，依舊是溫和的神色。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」直到吃到了一半，他暫時放下了餐具。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你大概覺得我瘋了對吧？做了這些事情，還會吃人肉…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我知道啊，但是沒辦法，想吃的東西就會忍不住去吃掉，我忍不了慾望。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「對我來說，吃人就等於同時發洩食慾和性慾。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「而且我啊，這部分跟瘋了沒有關係，只是想吃你到無法自拔罷了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......沒關係。」他抬起了頭，終於正眼看著前方的人，坐在另一頭的那個食人魔。<br><br>「我的確，不太喜歡這種行為......現在也是。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「但是、我想通了......」他用餐具攪拌著自己盤中的食材，將那些東西都混弄在一起，「都會變髒的......」<br><br>「所以、不用想著爬起來，一直這樣就好了......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你說過你需要我吧，那就這樣就好了......」他嘴角帶上了笑容，看起來不是真的笑著，而只是弄出了一個表情一樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「所以不用跟我解釋這些。」說完話後，他就用叉子將水果沙拉內的果粒壓碎，看著他們噴出了汁液。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…」他沉默地思考了一會。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我明白了。」思考過後，他又回到了原本的笑容，「說了多餘的話呢，那麼你慢慢享用吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們安靜地吃完了餐點。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">過了一會，也許是因為疲勞，睡意漸漸襲來。<br><br>雖說沒有痛感，但實際上兩腿都被輪流砍掉過了，照他剛剛提到的，大概也流了不少血，會這麼疲憊也是理所應當的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他大概是察覺到了你的樣子，輕輕一笑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「累了嗎？那就，回床上去吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他不由分說地將你抱到臥室去。 <br>這是第幾次了呢？被他這麼搬運。<br><br>到達臥室後，他一下子將你放下來，迅速地讓你躺好了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好，可以睡了喔。」<br>緩緩地撫過你的臉，你的髮，他溫柔地笑著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">話雖如此，他的目光卻沒離開你。<br>直直地凝視著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">大概是真的積攢了相當多的疲勞或是無力感吧。<br><br>一躺下就被無法抵抗的睏意侵襲，你的意識沈入黑暗。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">喀嚓，喀嚓，喀嚓。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">像是在削著什麽的聲音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">喀嚓，喀嚓，喀嚓，喀嚓，喀嚓…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">身體上似乎被按住，傳來了輕微的壓迫感，同時身體深處回蕩著的震動。 <br><br>那是從自己的左側感覺到的，但以遲鈍的感官根本無法判斷發生了什麽。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">要張開眼睛嗎？還是假裝沒事繼續睡呢？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">睜開了雙眼，雖然大概知道了......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你張開眼睛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">眼前是喰代唯的臉。<br><br>他帶著陶醉的表情，籠罩在躺著的你的上方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊抱歉，把你吵醒了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他按住你的身體，是什麽，又動了動胳膊。 <br>意識在逐漸清醒，身體卻動彈不得。<br><br>你感覺震動感是從你的左肩傳來的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">要看過去嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">決定不去看了，因為心裡也知道是在做什麼。<br>「......嗯，沒事......」<br><br>這肯定是報應、自己研究殺人植物的報應......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我會盡快結束的，再忍耐一下就好。」他短暫緩下了動作，讓你能夠聽清楚。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果我說我忍耐不了呢？」他閉上眼睛，知道這種話也只是挑釁而已，反正怎麼選擇都會是一樣的結果吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「忍耐不了…」<br>閉上眼，你在一片黑暗中，聽著他的聲音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「現在停下來的話有點危險，下次我會再想想別的方式的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「抱歉啊綠君，這次可能只能先這樣…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">說完，你又能聽見喀嚓喀嚓的聲音，以及感受著劇烈但規律的震動。<br><br>這傢伙在鋸著自己的身體，自己的左臂。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">有什麼噴濺到自己的臉上，除了鋸子的聲音外，中間好像混著喰代唯的低喘。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 1d6/1d10</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=36 【SAN CHECK】 (1D100&lt;=36) ＞ 94 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D10  (1D10) ＞ 1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 36 → 35</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">自己果然被變態纏上了。<br>深刻的體會到這點，心臟還是忍不住加快了一些跳動。<br><br>「還是、請你溫柔一點......」<br>害怕嗎？其實還是會害怕，但是......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「還是有點太粗魯了嗎？嗯…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你感覺震動停止了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我沒試過這種方式，但我試試看吧…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你感覺自己好像被喬了喬位置，好幾個位置跟姿勢。<br><br>他好像在認真的研究要怎麼切比較不會讓你覺得害怕。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我知道了，是這樣吧…！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">隨著豁然開朗的聲音，以及什麼劃破空氣的聲音。<br><br>嗖。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在那聲破空的聲音之後，隨著「撲通」的聲音，一種喪失感襲來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">儘管是閉著眼睛，你還是意識到自己的左臂完全落下了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 1/1d4</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=35 【SAN CHECK】 (1D100&lt;=35) ＞ 46 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D4 (1D4) ＞ 2</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 35 → 33</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br><br>心臟漏了一拍，恐懼、害怕......空洞。<br>原來自己面臨死亡的邊緣也是會有這種感覺嗎.......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗚......」<br><br>忍不住發出了低鳴聲，或許是因為在黑暗之中更加無法掌握住對方的行動，所以下意識地發出了一聲。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「已經結束了，辛苦了綠君，謝謝你。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你感受到自己的左肩被像是布料的東西包裹，又聽見他用一種不知名的語言嘟囔了幾句。<br><br>本來有什麼從身體一直流出去的感覺，迅速的止住了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「暫時這樣就行了…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沙沙的聲響，他聽起來移動了位置。<br><br>沒多久，你感覺包裹在肩膀的布料被鬆開，有什麼濕軟的東西貼上了斷面，摩娑而過，一次又一次。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">應該結束了吧？<br><br>將自己雙眼張了開來，重新迎接外頭的光明。<br>已經不知道該怎麼定義對方為溫柔還是蠻橫，自己心裡也開始有些混亂一些了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你睜開了眼睛，看向了自己的左肩，而他也在同樣的方向。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不知道到底在想什麽，他將臉湊在你剛切斷的肩膀上，舔舐著截面。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">每當他粗糙的舌頭撫摸著傷口，都會有一種電流般的感覺傳遍全身。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">無法抗拒。<br>無法動彈的你只能被迫接受這種感覺，身體顫抖著。 <br><br>自己的血尚未乾透，沾染他的嘴角。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">直到舔舐乾淨，他才從新正座，大功告成般地輕呼了口氣，用手指抹了抹自己的嘴角。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」忍不住打顫了好幾下，甚至過了好幾秒仍無法置信睜眼看到的畫面。<br><br>甚至可以感覺到呼吸有點急促.......<br>心臟劇烈跳動著，無法分辨是恐懼、震驚，還是某種無法言喻的情緒……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瞇起眼俯瞰著你，他挪動身子，離開了你的左方，回到了你的身旁。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「其實啊…真想把綠君的腹肉，你的內臟，你的舌頭，一點不剩地全部吃光…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他的手指從你的腿移到肚子，從肚子移到胸，從胸移到嘴。 <br>然後，將手指伸進微微鬆動的嘴裡，像玩弄舌頭一樣攪動著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不過再怎麽說，那塊肉也無法保全四肢以外的內臟器官，所以不能吃呢，以免殺了你。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">拔出手指，作為替代，他湊近你的臉，把自己的舌頭塞了進去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沾滿唾液的口腔內彌漫著鐵銹味。   <br>血，屬你自己的、血的味道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">無疑是非常可怕的，理應如此。<br><br>但為什麼，自己的舌頭和大腦，都無可奈何地感覺到了其中的美味？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">混亂的感覺跟停擺的思考撞成一團。<br>SC  1/1d4</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=33 【SAN CHECK】 (1D100&lt;=33) ＞ 26 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 33 → 32</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">......腦海中已經一片空白，無法思考了。<br>這傢伙、到底在做些什麼......<br><br>來不及從中得到解答，就被迫侵入了口中的柔軟處，奪走了判斷的餘裕。<br><br>自己舌尖本能性的回應著，像是被蠱惑了一般，沉浸在這份美味之中。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......」<br><br>耳畔所回憶的聲音，那天被拒絕的聲響殘存在記憶的深處。<br><br>自己很清楚，因為缺乏了愛，所以才會變得這麼狼狽不堪，內心深處的空洞無法填補，只能用這種卑鄙的方式索取。<br><br>綠單手抓住了對方了對方的衣領，彷彿不這樣做，自己就會徹底崩潰似的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你感覺四肢…喔不，是三肢無力。<br><br>右手不斷顫抖著，非常勉強地做出了你想要的動作。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他瞇起眸，就讓你這麼抓著，甚至輕輕地覆上了你的手。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這個吻…這算是吻嗎？<br><br>良久，他才稍稍退開，對著你露出滿足、欣喜，以及疼惜的笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「雖然是這種時候，不過，」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果綠君反悔了，不想繼續配合我的請求，也是可以的喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我也不知道為什麼，但我心中是希望綠君能夠開開心心留下，而不是自暴自棄的模樣呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不過啊，不管是怎麼樣的綠君，我都會接受的喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我想要你，鐮塚 綠。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">對方似乎給了你拒絕的選項，不過這人可是個神經病、食人魔。<br><br>如果反悔，拒絕了他的請求，會被放走嗎？殺掉嗎？<br>你想不到，他好像也沒說。<br><br>不過如果是殺掉的話，應該會被他一點不剩地吃光吧。<br>…在這之後呢？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在這時，<br><br>出乎意料的，他的身體突然脫力，倒在你身上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在你疑惑的時候注意到了，他輕而平穩的呼吸聲著，感覺應該是睡著了。<br><br>即便如此也太突然了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">但是，你現在自己也動不了。<br>只能就這麼躺著，感受著一人份的重量和溫度。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">所以說，不管是讓你離開，還是殺掉之後吃光光…<br><br>在那之後，<br>他可能會再去找別人吧。<br>忘卻自己的味道，會去尋找別人吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在渾渾噩噩間，你也漸漸閉上了眼睛…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">- TBC -</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">- 劇情再開 -</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在睡前聽到這些、忍不住皺起眉。<br>「就、就算你這麼說，我心裡也有其他喜歡的人了。」因為餘韻而輕喘著，比起對方，似乎更摸不著自己的頭緒。<br><br>「不過你的想要是建立在食物方面，那沒有什麼問題。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在那之後，你就這麼待在喰代家，度過了不長也不短的時間。<br><br>重複著被切下肢體、吃與被吃之外，你基本上會跟喰代唯共餐，姑且算是共同生活在這個屋簷下，持續著詭譎又有點微妙的互動。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你整個人呈現無所謂或放空的樣子，不是躺在房間就是躺在沙發上，但喰代 唯不時還是會湊到你的旁邊，關心你的狀況，或是問一些問題。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">像是…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">清理完廚房的他擦擦手，走到躺在沙發上的你的身旁，趴靠在背上。<br>「綠君，有沒有想去哪裡，或是想要什麼東西呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「想要的東西......」眼神日漸混濁，已經像是人偶一樣沒有什麼思考能力，這樣的日子從走到教堂那一刻被寫予了無可挽回的訣別書。<br><br>但在這段日子內，被他人所需，又或者是短暫地擁有那份名為「安全感」的溫存，內心還是開始會動搖。<br><br>如同在玫瑰荊棘之間行走，每一步都伴隨著危險與痛楚，自己卻無法抗拒那種被擁抱、被認可的錯覺。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......想要的東西。」<br>他眼神瞄向了那一扇窗戶，在陽光透進的那些光例子中，綠色的瞳孔反射著那暖色的光輝。<br><br>「可以、......」他腦海中已經描繪了那東西的模樣，他倒吞了口水、</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「幫我帶過來一盆鳶尾花嗎......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「鳶尾花嗎？我知道了。」他看著你，然後笑著頷首。<br><br>也許是終於聽見了你自己的想法，儘管只是簡單的回應、眼神沒有太多的交會，他卻喜出望外。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那麼今天的晚餐，有什麼想吃的嗎？這幾天好像吃麵比較多，會想要換成飯或別的主食嗎？」<br><br>「我前陣子試過白酒燉飯，會想試試看嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」雖然不明白為什麼對方要這樣做，這種對著食材帶入感情的方式就像是為自己所要食用的牲畜取下名字一樣，一點好處都沒有。<br><br>「無所謂，是說，我有個問題想問你。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你說過吃人肉是為了一次滿足人類兩個慾望，但實際上這個慾望應該再分回兩個不就不用踩在犯罪的邊緣上了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…」聽著你的話，他很認真地思考著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「更早以前的話，好像是可以的。」彷彿是在心中試想了一下你說的狀況，他慢緩緩地說著，「但在嚐過一次、兩次之後，就沒辦法停下來了，雖然也可以吃一般的食物，但那跟人肉的口感跟味道完全不同，沒有辦法用其他的料理代替…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「至於性慾…」從他的表情來看，這部分好像比吃的部分還要難想像，「這個我不確定，因為…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「根本沒有做過呢，只是那種亢奮感、像是血液湧動的感覺，呼吸跟心跳加速，很類似那樣的情況。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=90 【知識】 (1D100&lt;=90) ＞ 20 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">自己所知的知識範圍內，所謂的食人族雖然喜愛食用人肉，但是因為環境或者祭祀關係所逼，對於正常食物應該還是可以接受範圍內......<br><br>然而這傢伙所說的是不切實際的事情，如果要說不是精神疾病、恐怕就是......<br><br>想起種子吸附著人體的血肉，從中得到養分讓植物所盛開的事情......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這樣嗎......」線索太少了，而且依照現在的情況是沒有推理的必要。<br><br>這世界上是存在著所謂的『怪物』的，綠自己很清楚。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，不過雖然沒辦法放棄吃人肉，但如果你希望我少吃一點的話，我會試試看的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」居然妥協了？！<br>換綠有些驚訝，啊？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「比方說、抽菸的人......為了戒掉菸癮，就會使用差不多的方式來做替代。」可能是因為度過了好幾日，也沒有這麼封閉了，話也變多了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他走到你旁邊坐下來聽了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「從食用人肉獲得的快感，也可以藉由其他方式獲的吧？」嗯......食慾跟性慾嗎，後者直接請他去打電話找女孩子好了。<br><br>看著對方的反應，不知道為什麼突然有點欣慰，可能是因為自己的課長都沒好好聽自己說話過吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=60 【觀察】 (1D100&lt;=60) ＞ 22 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就跟剛剛很認真思考你的問題一樣，他現在也很認真在聽著，只不過，好像沒有很理解的樣子。<br>「藉由其他的方式獲得？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就你的觀察，你總覺得。<br><br>這個人也許還蠻單純，沒有想那麼多。<br>更像是在用直覺跟感官來思考一樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......像是做其他事情轉移注意力......之類。」<br>「......」嗯，大概講到這份上就好了吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這樣樣來看的話，應該是料理吧。」他沒有否定你的話，感覺還被說服了？<br>「做料理的時候很開心呢，吃起來會感到開心的話就更好了，不管是自己吃的開心，還是別人吃的開心。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你不知道這會不會改變什麼，不過至少，他應該是有聽進你的話。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......」畢竟曾經被切割、撕裂的感覺早已深深刻入骨髓似，即使是無所謂的態度，這些記憶還是被迫烙印在腦海。<br><br>能少一些也是好的......<br>、反正死不了，就輕鬆一點好了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他還說了你講了一些他覺得可以試試看的「替代」方法，不管你回應的多寡，在你跟上次一樣說不需要講這些之前，應該都會繼續跟你分享吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那一天之後的隔天早晨，離開臥室的你，一眼就能看到在窗戶邊的小木桌上，擺著伸展翠葉、盛開紫花的盆栽。<br><br>窗外的陽光灑在鳶尾花上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">偶爾會有這樣子的互動，日子一天天過去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">目前從相處下來，你發現除了需要吃你之外，喰代唯都會盡量達成你的要求，像是需要什麼、想要什麼，或著建議他做什麼。<br><br>基本上，他非常照顧你的需求。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他確實減少了吃人肉的頻率，每兩天至少會有一餐是跟你吃一樣正常的食物跟料理，儘管臉上看起來不是很適應、覺得少了什麼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">大約兩天一次，他會跟你「拿取」一條手臂或是一條腿。<br><br>當然，大概半天或最慢一天，失去的肢體就會重新長出來。<br>然後又重複這樣的「日常」…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">再重複…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你再次醒來。<br><br>試著起身的時候，即便是剛剛醒來，還是感到一陣倦怠感襲來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">從那之後已經過了多少天來著？<br><br>你記不清楚了，也差不多習慣了這樣的流程，偶爾的小插曲或交談。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">四肢回歸後就會被切之外，還會被舌頭蹂躪斷面傷口，不過大概是因為知道你多少會感到有點害怕，大部分的時候，切除的工作還是在你熟睡的時候完成的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">因反覆出現的異常行為<br>SAN-2d6</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=32 【SAN CHECK】 (1D100&lt;=32) ＞ 26 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">2D6  (2D6) ＞ 10[4,6] ＞ 10</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 32 → 22</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">撇除犯罪…<br>…如果，就這樣維持被吃跟被他注視著，成為他的佳餚的話，好像也不錯。<br><br>不知不覺間，你的腦中開始出現了這樣的念頭。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">每當浮現這樣的想法又會突然回過神來。 <br>自己，究竟是怎麽了呢。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">依稀記得，昨晚也是那樣，兩人精疲力盡後睡著了才對。<br><br>睡前感覺到的重量和溫度都不見了。<br>看起來他已經先起床，去了別的地方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">現在誰都不在。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">對此感到有些空虛，是因為自己的心本來就是空洞，還是其他的錯覺？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看看自己的身體的話，能發現罕見地擁有著四肢。<br> <br>昨天睡前被切下來的是右腿來著，大概是睡眠期間被治療了吧，已經恢復原樣了。<br><br>不過果然才剛剛成型，右腿基本沒有什麽感覺。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">單腿站立的話，應該可以在家裡走動了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">決定去晃晃，幫花澆澆水好了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你慢慢地移動，打開了門間門。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">門外依舊是同樣有著客廳、餐廳、廚房的一體空間，雖然是迫於無奈，但你已經算是很熟悉了。<br><br>以及那扇你還沒有進去過的門，就在空間的一角。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">家裡靜悄悄的，沒看見喰代唯。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查地點<br>【 走廊盡頭的房間】 或去澆水水</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不知道那房間是什麼、......<br>已經僅存的好奇心促使著自己的行動。<br>他走到進頭的房間門前，毫不猶豫地打開。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【走廊盡頭的房間】 <br>看起來是儲物室。<br>有條不紊地擺放著幾個收納盒。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查地點<br>【收納盒①/收納盒②/房間整體】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看一下房間整體。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=60 【觀察】 (1D100&lt;=60) ＞ 99 ＞ 致命性失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你感覺地板上有著違和感。<br><br>但在想仔細看的時候踢到了旁邊的雜物而直接往前摔了一跤。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] HP : 14 → 13</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">有點痛，但你也摔在了你剛在意的地方旁。<br><br>你能看見地板上有個鑰匙孔。<br>這下面恐怕是個地下室。<br><br>然而，到目前為止都沒有見過類似鑰匙的東西。<br><br>…有什麼可以代替的東西嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《靈感》或 《鎖匠》或現實靈感</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不想看也可以都不骰</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=90 【靈感】 (1D100&lt;=90) ＞ 17 ＞ 特殊</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你看這個鎖並不是太過複雜的鎖，可能用兩個鐵製髮夾之類的東西就能撬開了也說不定。<br><br>喰代唯在下廚的時候也會用髮夾固定側髮，也許房間裡會有髮夾吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">將夾在頭髮上的夾子取下，隨意的開開看。<br>是說被發現做了這種事情會不會被殺掉呢......<br>嗯......<br><br>或許這樣也不錯。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">隨著細微的哢嚓聲，鎖就打開了。<br><br>可以進入地下室了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看一下那些收納盒。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【收納盒①】<br>各種各樣的袋子被隨意地扔在里面。再進一步挖掘，能夠看到自己隨身物品也在里面。 <br><br>你的手機也在裡面，但因為沒電了而無法使用。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《觀察》 檢定</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=60 【觀察】 (1D100&lt;=60) ＞ 98 ＞ 致命性失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你在翻找東西的時候被什麼尖銳的東西劃了一下，有點痛，但沒受傷。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《幸運》 檢定</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=50 【幸運】 (1D100&lt;=50) ＞ 62 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你沒發現其他東西了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看看收納盒2，痛......<br>可能是對剛長出來的腳不太習慣吧，連路都不會走一直弄傷自己。(</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【收納盒②】<br>雜亂地放著一些文件和書籍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看一下文件跟書籍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【書籍】<br>看起來是他自己寫的食譜。<br>從人類的解體方法到放血，處理肉的方法也寫在上面。至今為止已經吃過各種各樣的人類了吧。<br><br>人肉料理的菜品種類已經十分豐富了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【文件】<br>看起來像是某種通訊錄。能看見里面事無巨細地記錄著照片、姓名和住所、愛好和飲食、生活習慣。<br><br>此外，最後還記錄著怎樣的部位是怎樣料理的，是怎樣吃掉的，味道如何之類的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不過好像一陣子沒有更新了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">SC 0/1</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=22 【SAN CHECK】 (1D100&lt;=22) ＞ 57 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 22 → 21</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《幸運》 檢定</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=50 【幸運】 (1D100&lt;=50) ＞ 3 ＞ 決定性的成功/特殊</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">壓在文件的底部，好像還有什麼東西。<br><br>你發現了不知道是誰的小型電擊槍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">拿起來。<br>嗯......。<br>收好。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就這樣走下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">從儲物室的地板下到到樓梯，穿過盡頭的門，在那後面是昏暗的空間。<br>唯一的光源只有從天花板上垂下來，看上去完全不可靠的裸燈泡。<br><br>而它所照亮的是某種祭壇一樣的地方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">周圍有著書架和桌子。<br><br>更搶眼的是和這里格格不入的巨大冰箱。<br>只有這個空間被一種異樣的空氣所包圍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查地點<br>【祭壇/桌子/書架/巨大的冰箱】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=21 【SAN CHECK】 (1D100&lt;=21) ＞ 5 ＞ 決定性的成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>冷靜點、這些......<br>果然跟自己猜想的一樣嗎。<br><br>人花教的記憶湧入深處，綠深了呼吸。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這一切都是命運的選擇吧。<br>讓自己捲入這樣的事件......<br><br>「......但我也是個警察......」<br>保護人們......這是信念，就算墮落到谷底也不會捨棄掉的。<br><br>如果確定了有這樣危險的儀式、那就......<br>他又再次深深吸了一口氣，調查祭壇。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【祭壇】<br>祭壇上有放過什麽東西的痕跡。有最近使用過的痕跡。 <br>他到底在這里做了什麽？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你注意到旁邊的桌子有個抽屜沒關好。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【桌子】<br>有抽屜。<br>打開後，裡面有一張筆記。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">情報</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">・需要冷藏。 <br>・塑形並連接肢體的缺失部分。 <br>・使用的時候，需要以精神力作為代價來重塑缺失的部分。 <br>・成型需要約半天的時間，再過半天才能完全恢復感覺。 <br>・補充肉泥需要額外的人肉。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">主頻道</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">緩緩走到另邊看向書架。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【書架 】<br>用不同的語言書寫的古老文獻並列排開。<br>有一些文字是你從沒看過的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《圖書館》檢定</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=50 【圖書館使用】 (1D100&lt;=50) ＞ 46 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">書本間夾著一張紙。<br>看上去是某頁書被撕下來了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">情報</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這是簡化後的法術，在魔法研究中成功開發，減少了精神力的消耗，作為代價效果同樣有所下降。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">使用此法術需要6MP，使用後能能夠恢復2d4 HP。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">主頻道</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">咬著嘴唇、繼續往冰箱看去。<br>啊......大概也會知道放什麼了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【巨大的冰箱 】<br>打開後，裡面放著的是之前見過，放在真空袋中又白又軟的肉塊。<br>不過沒有看見過的巨大肉塊，感覺上數量大大減少了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>看完了，離開吧。<br>是說對方不在呢，現在好像能夠直接逃走了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">但逃到外面......嗯。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就像你想得，<br>現在他不在這里，說不定能從這里逃出去。 <br><br>這樣的想法在腦中一閃而過。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就在此時。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">嘭。<br>然後是開關門的聲音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，哧溜哧溜，哧溜哧溜。<br><br>傳來了拖拽著什麽的聲音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他回來了。<br><br>然後，朝這邊走來。 <br>無論現在做什麽，都毫無疑問會和他撞上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">該怎麽辦？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【只能進行一次行動】</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」躲起來嗎？<br>似乎也來不太及了，找藉口嗎？<br><br>不對、自己幹嘛找求生的理由......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">選擇直接面對怪物。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">下樓的腳步聲和拖拽東西的聲音，隨後，是眼前的門被打開的聲音。 <br><br>正如所料，他站在那裡。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看到你在這裡的時候他有點驚訝，不過隨後又勾起平常的笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「原來在這裡，嚇我一跳，感覺還沒恢復的話到處亂走很危險。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯…讓兩條腿都回去是錯誤的嗎？之後會注意的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「想說這樣對綠君應該比較方便，所以才先治好的。」他說著，不過並沒有生氣的樣子，聽起來還是擔心你比較多。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他抬起手，將他抓在手上的一大東西扔進了房間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">用大布包著的東西。<br>微微滲出紅色的液體，不用問也知道那是什麼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「雖然這樣問有點遲了，我想問問、 唯君從以前到現在，總共殺了幾個人呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「對不起，已經不記得了。」他歛下笑意，平靜的回答你的，「我想，應該是不能夠細數的數量。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>又會因為自己的原因，害死更多人嗎......<br>想起筆記的內容，真的不難推想。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唯君怎麼對我都無所謂，真的......」他平淡的語氣彷彿前些日子的相處都不存在一樣，「但我不希望有人再因為我死去了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不希望，有更多人因為綠君死去嗎…」呢喃著你的話，他垂下眸，「但是綠君在外面，過得很辛苦、很不開心吧？為什麼還要在乎那些人？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">果然調查過我了嗎......<br>聽到後，似乎想到了很多熟悉的面孔，卻拼湊不出一個明確的答案。<br><br>「為什麼......為什麼呢。」聲音微微顫抖，像是在自問似。<br>「我、不知道。」<br><br>最終，他只是低垂著眼睫。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「原本的綠君不是這個樣子的，但從回到這裡之後，就變了個樣，一定受了很多的苦吧。」越說著，他就越顯疑惑，輕輕地踏下了樓梯，站在距離你不遠也不近的位置。<br><br>「是那些不開心的事情、痛苦的事情再折磨著綠君吧？但是在這裡不需要擔心那些事情。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 23 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=21 【SAN CHECK】 (1D100&lt;=21) ＞ 63 ＞ 失敗</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」對啊、自己為什麼要去在意他們......<br>他們回報給自己過什麼了嗎？<br><br>隨意地把自己拋下，叫自己去死，打罵自己......<br>就在最後連一個道歉都沒有。<br><br>其實對方講得話並沒有錯。<br>應該說，從頭到尾都是自己一廂情願而已。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......嗚......」<br>眼淚在眼眶打轉著，在這裡沒有那些對待，不用思考那些事情......。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">凝望著你，他走向你，伸出手輕柔的將你擁入懷。<br><br>「這一路走來辛苦了，綠君。」<br>他溫柔地輕撫你的後背。<br><br>「外面的世界對你來說一定很糟糕吧？但是不用害怕了，因為我會保護綠君喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果那些人不需要綠君的話，就把他們都丟棄吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就算這個世界都拋棄你，我也不會那麼做的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我需要你，鐮塚 綠。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」就算對方所需僅僅是自己的身體，那也是建立在某種需求之上的。<br><br>只要能夠被對方所需要，哪怕是以這種方式，心中的空虛也似乎能夠被填補。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唯君可以......」哽咽的聲音卡在喉嚨之間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「可以讓我忘記那一切嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我會努力的。」他肯定地說著，話語中沒有任何虛假，「綠君想要的，希望的，我也都會盡力去達成喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那，綠君，」他稍微鬆開懷到，正面著你。<br><br>「知道了我的全部，綠君也能夠接受這樣的我嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>接受與不接受重要嗎？<br><br>「嗯......」跟對方對視著，「我好痛苦......我每天都做著惡夢、做著自己道歉的夢......唯君，我好痛苦......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">シークレットダイス ???</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我知道。」牽起了你的兩手，將手捧在兩掌之間，「那些事情已經都跟綠君沒有關係了，不用去在意了。」<br><br>「已經沒事了，我會陪著綠君。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他溫柔的注視著你。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我從沒有對你期望過。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這樣的話與刺痛著你的神經。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">與此不同的是，他看著你的目光中充滿著期待－－</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">至今為止，除了他之外，又還有誰會這樣追求自己呢？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">如果，就這麼在這裡沉淪……忘掉一切的話……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">ED1「我要開動了」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">調查者生還</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">從今往後，調查員都將作為他「永遠的佳餚」度過一生。<br><br>保證衣食住，也許會跟一般的生活相馳甚遠，但未來會發生什麼事情，誰也不知道。<br> <br>可以繼續使用，但調查員的歸宿將與他同在。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【生還獎勵】<br>恢復已減少的一半SAN</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【後遺症】(至少擇一)<br>1.你會因為被別人吃掉而感到興奮。 <br>此外，對人肉或是人肉制成的料理並不排斥(但可以拒絕食用)，相對應的不會發生SC。<br><br>2. 獲得【斯德哥爾摩症候群：喰代】</div>
+</div>
+</div></div><!--EOS-->
+
+</body>
