@@ -1,0 +1,3255 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="凌晨兩點，來見我吧。　唯綠">
+<meta property="og:description" content="">
+<title>凌晨兩點，來見我吧。　唯綠</title>
+<style>
+h1{ color:white; margin: 5px 0; }
+body{ background:#454752; }
+._subtitle { color:#ddd; margin:5px 0 20px 0; }
+._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
+._hidden { display:none; }
+
+/* 主容器：垂直排列 */
+.center { 
+  display:flex; 
+  flex-direction:column; 
+  align-items:flex-start; 
+}
+
+#_main { display:flex; flex-direction:column; align-items:end; }
+
+/* ★ 所有 script 區塊置中（title / talk 共用） */
+._script {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+._halt { padding:30px 0; }
+._bgImg { text-align: center; }
+._bgImg img { max-width: 800px; }
+
+/* talk 本體 */
+._talk {
+  margin:5px 0;
+  display:flex;
+  border:1px solid black;
+  background:#1e1e1e;
+  color:#eee;
+  width:100%;
+  max-width:1080px;
+  border-radius:5px;
+}
+
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+
+._actorName{
+  padding:5px 10px;
+  height:20px;
+  font-size:18px;
+}
+
+._actorImg {
+  margin:6px;
+  width:110px;
+  height:110px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:#2a2a2a;
+}
+
+._actorWords {
+  margin:5px;
+  background:#2a2a2a;
+  font-size:1.1rem;
+  padding:10px;
+  height:calc(100% - 60px);
+  border-radius:5px;
+}
+
+._sectTitle { border-radius:5px; margin-bottom:5px; }
+
+/* ===== noImg 處理 ===== */
+._talk.noImg {
+  display: block;
+  margin: 5px 0;           /* ★ 與一般 talk 間距一致 */
+}
+
+._talk.noImg ._leftCol { display: none; }
+._talk.noImg ._rightCol { width: 100%; }
+._talk.noImg ._actorImg { display: none; }
+
+/* ===== RWD ===== */
+@media only screen and (max-width: 400px) {
+  ._leftCol { width:100px; }
+  ._rightCol { width:calc(100% - 100px); }
+  ._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
+}
+
+/* 其他頻道（目前隱藏） */
+._talk.otherCh {
+  width:calc(50%);
+  text-align:right;
+  margin-left:auto;
+}
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
+._talk.otherCh ._actorWords { background:black;color:white; }
+
+/* 純圖片 */
+._talk.imgOnly ._imgOnlyWrap {
+  width: calc(90%);
+  margin: 6px;
+  background: #2a2a2a;
+}
+._talk.imgOnly ._imgOnlyWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== 區段標題框 ===== */
+._script[data-type="title"] ._titleBox {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 10px 15px;
+  margin: 30px 0 0 0;     /* 上距較大，下距貼近 talk */
+  border-radius: 5px;
+  border: 1px solid #555;
+  text-align: left;
+  width: 100%;
+  max-width: 1080px;
+  box-sizing: border-box;
+}
+
+/* 自定義生成 */
+._actor_0 ._actorName { color: #888888; }
+._actor_0 ._actorName::after { content:" "; }
+._actor_0 ._actorImg { background-image:url(); }
+
+._actor_1 ._actorName { color: #888888; }
+._actor_1 ._actorName::after { content:"KP"; }
+._actor_1 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/KTtVEcIie4QZbxPX1isJzO4wg2n1/files/67fe48ca7eb05e71520de98b5337d1ea09e699e7bbd959f8d66058b63cfa77ca"); }
+
+._actor_2 ._actorName { color: #e91e63; }
+._actor_2 ._actorName::after { content:"毛毛的PL"; }
+._actor_2 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/ofAVLJiHnBU9EwUbrOYOjr7vLRt1/files/533702ae41bb8e7197a777228039947d75d4d8ca9bb04efa10ab096c10be54f9"); }
+
+._actor_3 ._actorName { color: #e91e63; }
+._actor_3 ._actorName::after { content:"喰代 唯"; }
+._actor_3 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/ofAVLJiHnBU9EwUbrOYOjr7vLRt1/files/4d07ffd332f20a44ca19b0f38832349b360798afe983c93d1035663ec6be7bc7"); }
+
+._actor_4 ._actorName { color: #8bc34a; }
+._actor_4 ._actorName::after { content:"鐮塚 綠"; }
+._actor_4 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/IKmizM0ehtWKZw9Mxw5ubJAyhrQ2/files/9758b761d4fd6316e9cb3794607c2b1fb7bfc8f8da246b612ce3f5d02f9d9aaa"); }
+
+._actor_5 ._actorName { color: #888888; }
+._actor_5 ._actorName::after { content:"？？？"; }
+._actor_5 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/KTtVEcIie4QZbxPX1isJzO4wg2n1/files/008593e3d247c8b679102c531fd8748bc62972d7e77ccc1a850d5be6ecd30a1d"); }
+
+._actor_6 ._actorName { color: #888888; }
+._actor_6 ._actorName::after { content:"克蘿托"; }
+._actor_6 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/KTtVEcIie4QZbxPX1isJzO4wg2n1/files/008593e3d247c8b679102c531fd8748bc62972d7e77ccc1a850d5be6ecd30a1d"); }
+
+._actor_7 ._actorName { color: #ceceff; }
+._actor_7 ._actorName::after { content:"黑木"; }
+._actor_7 ._actorImg { background-image:url("https://storage.ccfolia-cdn.net/users/KTtVEcIie4QZbxPX1isJzO4wg2n1/files/48371238e26e83ca9a561e5d544fafdab73465fef7bdf7a6a333cea255b55e33"); }
+
+._actor_8 ._actorName { color: #ff8080; }
+._actor_8 ._actorName::after { content:"▶︎報酬"; }
+
+._actor_9 ._actorName { color: #888888; }
+._actor_9 ._actorName::after { content:" "; }
+
+
+
+.otherCh{ display:none; }
+</style>
+</head>
+<body class="center">
+<div class="_hidden">
+<version>hazmole_v1.0</version>
+</div>
+<body class="center">
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">凌晨兩點，來見我吧。　唯綠</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">《凌晨兩點，來見我吧。》<br>ごぜんにじにあいにきて。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在你們在喰代的家中經歷了那場稱不上美妙的碰面之後，已經過去了差不多一年多了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在那一天，你們約定好了，在今天傍晚的時候，要一起到海邊去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">現在，便是你們達成要一同前往海邊的約定的場景。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">－－－</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">踏著細沙，作為提出邀約的那一方，唯雖然像是領著頭，實際上更像是配合著對方的速度，不快不慢地前進著。<br><br>那是在幾天前的事情了，提出了想要跟小綠一起去海邊散步。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「因為從沒跟誰一起在海邊散步過，一直想試試看。」<br><br>這麼說著，不過他臉上沒有平常那樣輕鬆的氛圍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」垂著眼眸看著對方。<br>「怎麼會突然想來呢？」視線落在腳邊那些被腳步散開的金黃細沙上，海浪那令人心曠神怡的拍打聲迴繞在耳邊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「海邊是可以讓人感到寧靜的地方，尤其晚上的時候。」視線放遠了些，他看著離他們不太遠的浪花，映著相對遙遠、街道的燈光，波光粼粼，「網路上是這樣寫的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">此時此刻，你們所來到的，是離東京不遠的逗子海岸。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">若是白天，大概會有來散步或衝浪的人，使這裡稍微熱鬧些。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">而傍晚的海則顯得寂靜，彷彿這片空間被從日常中切割出來一般，有一種只屬於你們二人的寧靜感。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「綠君喜歡海邊嗎？」<br>說到這，他望向了對方，露出一抹笑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「算是、喜歡？」已經過了很久，有些情緒已經漸漸平復了，眼瞳終於再次能夠捕捉到夕陽的光輝。<br><br>「我是唯君第一個想到要一起來海邊的人嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我只想跟綠君一起來喔。」肯定的回答，他稍微用力一點，在沙灘上踩出一個清晰的腳印，然後又回頭望了眼，看著兩人在沙灘上留下的步伐，「其實有機會的話，還想跟綠君一起去很多地方看看。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不過連近一點的地方都還沒去過，剛好有這個機會，就想來這裡走走了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......如果是在幾個月前，我想我不會這樣說吧。」綠看著地上從淺灘中爬出的小生物，嘴角只是帶上了淡淡的微笑。<br><br>說完這句話後，他忽然向前跑了幾步，腳步踩在柔軟的沙地上，留下了一串淺淺的腳印。<br>或許因為地點是在海邊吧，所以拘束感比在擁擠的城市內少上許多，動作也跟著輕鬆奔放了起來。<br><br>綠停下腳步，側過頭，看向那個仍站在原地的人，「下次要去哪裡呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看著往前跑的對方，唯停下的腳步，訝異中掩藏不住欣喜的情緒。<br><br>雖然說不管是什麼樣的綠，他都喜歡，不過這樣開朗的模樣，果然是最深得他心的，同時，也是他所期望的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「下次嗎…」他眨了眨眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">停頓好一會，他邁開步伐跟上對方，不過，是踩著對方留下的腳印。<br><br>一步，兩步，三步…<br>直到停在對方面前。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「下次要去哪裡，綠君要一起決定嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「一起嗎？」換他愣住了。<br><br>他的眼神露出了一絲的茫然，海風正巧輕輕吹過，吹亂了他額前的髮絲，他用手指稍稍撥開了一下。<br><br>一同、一併這個詞是有多沉重的呢......<br>在一年前的時候，跟自己一起工作的同事們......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">大家都會、變成那樣嗎......<br>就算自己多努力了，最後也會得到這種成果。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這時換他主動拉起他的手，然後兩眼看上去對方的臉。<br><br>「唯君......會一輩子待在我身邊嗎？」<br>「......因為你跟我約了下次不是嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">偶爾，也會聽到對方說出類似這樣的話，不過用上這樣飽含情感的詞彙，還是第一次。<br><br>一輩子，就跟自己口中的「永遠」是一樣的對吧？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在被牽起手的後幾秒，唯回握了綠的手，微微瞇起的眼眸中，是真誠而毫無虛假的神采。<br><br>「嗯，我們約好了啊，因為『永遠』或『一輩子』，都是相對的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「綠君也…同意這點嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」他又落寞地垂下了頭。<br>「其實，我不知道。」<br><br>他似乎輕輕地掙脫了你的手，「之前唯君說過，我是佳餚對吧？」<br><br>他語氣淡淡的，沒有抬頭看向你。<br>只是站在夕陽與浪岸交錯的空間內，讓自己的影子拉長了一些。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「經過了這麼久，唯君應該也要知道了吧，這種事情是很輕易的被取代的。」<br>自己在說些什麼呢......<br><br>「要維持永遠或者一輩子是很難的，抱歉我剛剛講了奇怪的話。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......我想我也綁著你很久了，那個，唯君應該有更適合『永遠』在一起的人。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他看起來有點疑惑的樣子，甚至花了點時間思考，思考哪裡出了錯。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「綠君…不想和我一起了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沒有憤怒，理所當然也沒有任何笑意。<br>平靜？也不盡然。<br><br>也許這是鐮塚綠第一次看到這樣的他。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他在害怕著什麼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哎呀，還真是少見的事呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們或許會被突如其來從背後傳來的聲音嚇了一跳。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">轉頭一看，一位看起來大約十二歲的少女正靜靜地站在那裡。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">五官端正，身穿一襲彷彿披著夜空般的黑色洋裝。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這麼晚還在散步嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">眼前的少女以比外表更為成熟的舉止向你們發問。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」誰？？？？？<br>「你走失了嗎？」前警察收回很重的情緒，沒回答對方的告白，先問小女生。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你仔細看向了少女，你注意到，雖然她的雙眼張開，但視線卻無法與你對上。或許，她看不見你們的樣子也說不定。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…」默默的站在小綠前面一點的位置，護著對方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不，我並沒有走失。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我叫做克蘿托，我一個人住在這裡喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊，不是在城裡哦。我住在這片海岸邊的洞窟裡。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我剛才好像感覺到你們在進行很沉重的對話，所以不小心就忍不住打斷你們了呢，真不好意思。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊、呃......」有些尷尬地看向唯君。<br>「所以......欸？你住在洞窟裡面？」有些驚訝說著，啊......不對，剛剛唯君好像講了很重要的事情......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唉呀，其實我是想要說。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果想要一輩子在一起的話，或許我可以幫助你們喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「？？？？？？？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…」看起來好像想說什麼，不過看了下綠君，還是閉上嘴了。<br>不過確實被勾起了一點興趣了，儘管還是很警戒對方的樣子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「呃－－－那個，你在說些什麼呢？」一臉疑惑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=90 【知識】 (1D100&lt;=90) ＞ 72 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唔，簡單說起來就是一種祝福吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果你們願意幫我一個小忙的話。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那個啊，我把東西弄丟了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「可是，我的眼睛看不見，沒辦法自己去找。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「所以才想要拜託你們。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">少女一邊這麼說著，一邊拿出了一串項鍊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">可以看到，項鍊之上串的玻璃珠，看起來少了幾顆。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如何呢？你們願意幫我這個忙嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">她雙手合十抬頭望著你們，說道：「拜託了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">幫助別人就會......<br>不過對方只是個小女生。<br>而且眼睛看不到......跟課長一樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......掉在哪呢？」先問問看再說吧，不過唯君都沒有意見嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">注意到綠的視線，唯也看了下對方，看起來好像沒什麼意見的樣子，或者就是以綠的意思為主。<br><br>他臉上沒有什麼表情。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......怎麼了嗎？唯君？」他伸手拉了拉對方的袖子，「剛剛那件事情......」<br><br>他思索了一下，「我等等會回你的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯順著拉扯袖子的方向再次看向綠，隨後便輕輕點點頭。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">少女在旁邊靜靜地聽著你們的對話，接著，聽到你們願意幫忙，克蘿托的表情頓時變得明亮起來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「謝謝你們，真的幫大忙了！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這麼說著的她，不知何時手中已經提著一盞燈籠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">克蘿托將燈籠遞給你們，接著開口說道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「實際上，這條項鍊，是姐姐們送給我的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「據她們說，上面裝飾著三顆深藍又漂亮的玻璃珠呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好像是些不可思議的玻璃珠，應該看到就能認出來的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我從來沒有離開過這個海岸……所以應該掉在沙灘附近或周圍吧。大概啦。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我也看不見掉在哪了呢……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我會在這裡等你們的，就拜託你們了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接下他遞過來的燈籠。<br>「嗯......反正在附近晃晃就好了吧？」其實沒有很在意對方所說的禮物，反正應該也是個噱頭而已，就當作幫助小朋友。<br><br>「唯君......？」今天怎麼怪怪的？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在綠接過燈籠後沒幾秒，他就接過了對方手上的燈籠，仔細的觀察、檢查一下。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「怎麼了，綠君？」<br>邊認真的檢查，邊回應對方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你仔細的檢查了一下，上面並沒有任何魔力的氣息，當然，更沒有你想要找到的那種氣息，之類的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就只是一個再普通不過的燈籠而已。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那個......不太習慣，你這樣......」<br>是因為平常都在相處在一起，所以當沒有了對方的聲音，自己有些焦慮嗎？<br><br>「比較、安靜？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">靜靜的看著燈籠良久，他才正常的提在手上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊、嗯…抱歉，只是在想一些事情。」他似乎深呼吸了口氣，然後變回了平常那個總是帶著溫柔淺笑的模樣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「要去幫那個神祕的小女孩找東西對吧？就像是日行一善之類的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=10*5 【POW X 5】 (1D100&lt;=50) ＞ 21 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」好奇怪喔......他平常不是都會跟自己講的嗎？<br><br>不是，這樣想的自己也很奇怪？<br>為什麼要為了唯君著想，兩人只是利益關係而已。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">此時此刻，太陽已經差不多墜入了海中，你們所漫步著的海灘，也逐漸被如墨一般的黑暗所浸染。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">逗子海岸邊上所布置的LED燈，投射在浪花之上，使的拍打在沙灘之上的浪花微微散發著青藍色的光芒。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在這一刻，遠方的少女的身形也已然被墨色所吞沒，喰代手上的燈籠發出柔和的光芒，映照在你們二人的臉上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">此時此刻，是僅屬於你們二人的時間。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那個，唯君剛剛問的......」他深吸了一口氣，「跟唯君在一起......那些日子算快樂嗎，我不知道。」他眼神再次逃避似的飄向了一旁的海平線，但很快地就收了回來。<br><br>「從那件事情後，我似乎已經忘了怎麼快樂了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......但是唯君說要讓我忘記。」<br>「所以、我想試著相信......再一次相信別人。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他右手抓著自己的左手臂，看起來有些害怕。<br><br>「雖然一開始是我那樣說的......啊，大概是這種意思？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">如果是平常，他會去牽起對方的手，但現在…<br>該牽上去嗎？他不確定。<br><br>之前好像都是很直覺的事情，為什麼現在會思考那麼多？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「一開始說的……綠君是指哪個部分？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「很久之前，我剛被抓到的時候，我不是說了，無所謂嗎......」雙瞳再次對上了紅色的雙眸，他咬著嘴唇，「現在不是無所謂。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那，嗯…撇除我所想的，」回望著綠，他不知道在什麼時候又收起了笑容，講話也變得有點…小心翼翼，如履薄冰。<br>「綠君現在是怎麼想的呢？我們之間的關係。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>「那個、唯君將我當食物......然後利益交換給我情緒價值嗎......這樣算是一種......」<br><br>「......等價交換嗎？」INT18跟INT0一樣。<br>雖然這麼說著，不過兩人做著像戀人的事情，其實心裡也明白。<br><br>自己可能是騙子吧，利用了這一層關係。<br>就跟當時一樣，騙了大家......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在綠親口說出來之前，他已經猜想過幾次是這個樣子了。<br><br>因為不管網路上、書籍上怎麼寫，不管自己已經認定了這樣的情感能夠被定義為「喜歡」，做了許多自己認為「喜歡一個人」應該要有的反應，也許結果而言還是跟常人的定義有些出入吧。<br><br>畢竟一開始做了那樣的事情，會被這樣認為，也是理所當然，<br><br>不過…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「其實這幾個月，我想了很多。」<br>難得的，他猶豫該不該開口，從微妙的表情變化能窺探其中複雜。<br>「只是為了能『吃』的話，真的有必要做那麼多嗎？」<br><br>保護對方自然不用說、照顧、觸碰、接吻…<br>甚至可以為了對方減少食用人肉什麼的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">直接把人關起來應該會輕鬆很多吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「有很多方式，好像都可以替代我們這樣的互動，甚至可以不用在乎綠君的意見跟想法才對。」他偏了下頭，流露疑惑。<br><br>「可是我覺得，是我自己想做這些的，不是為了能夠吃到綠君而做的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「雖然綠君是那樣認為的，可是我不覺得是這樣…」這次帶起的笑容，有點無奈。<br><br>「也許原本是那樣，但現在……我是因為喜歡綠君才這麼做的吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我可能不太懂一般人的感情…但我覺得是這個樣子的……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「所以…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">尾音漸弱，最後重歸沉默。<br>彷彿是在試著肯定自己。<br><br>因為也沒有別人會肯定自己了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">CCB&lt;=37 【SAN CHECK】 (1D100&lt;=37) ＞ 23 ＞ 成功</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">聽完後腦袋稍微當機了一下。<br>喜歡嗎......喜歡......<br><br>雖然想到之前被告白後受到的遭遇，綠一陣冷汗。<br>但是這陣子，唯對他所做的，撇除吃人肉那點。<br><br>但他確實從這段日子感受到了那份溫度。<br>不是激烈，也不是甜膩，而是一種淡淡的、但會慢慢蔓延的依戀感。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「.......的確，直接把我關在地下室然後把我四肢拿走，只要生成其他身體部位的肉就可以了吧。」他微笑了笑，伸手撫摸著對方的臉頰。<br><br>「可是你沒有這樣做，你答應了跟我的約定。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我可能沒有真的喜歡誰過。」<br>課長、前男友什麼的......<br>自己都是因為想要得到他們的認同，付出了那一切。<br><br>但現在不一樣，這裡並沒有這樣子的關係，不需要強迫自己什麼。<br><br>「喜歡是什麼，我可能無法告訴唯君。」<br>「但我想跟唯君繼續生活，做那些事情......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「謝謝你喜歡我。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就在這時，在燈籠的光芒之下，你們注意到了，在貝殼與海玻璃之間，閃爍著一絲藍色光芒。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那反射著燈籠光線的東西閃耀著偏光，綻放出各色光輝。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「綠君…」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就算沒有明確的答案，但對方的行動，簡單的反應，對他來說已經回應了自己的問題，撥開了迷茫與不安定。<br><br>目前…這樣就夠了吧，<br>只要綠君，還願意待在自己身邊…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">向撫於頰畔上的溫度傾靠，唯重新露出笑容，接著伸出手、擁向對方。<br><br>攬進懷裡的，是與自己相不同的溫度。<br>也是純粹的作為「佳餚」所沒有的溫度。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就算很困難，我還是想跟綠君永遠在一起…」<br>「更沒有想換成別人呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「願望…就算誇大一點也沒關係吧？」<br>他有些俏皮的眨了下眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」在對方懷中，能感受到的是不同於海風清冷的溫度，混雜著鹹鹹的、又或者是對方特有的那種香味。<br><br>「我也會試著、試著......」<br><br>聲音輕得幾乎要被海浪聲吞噬，他努力抬起頭，看著對方那雙魅紅色的雙眼。<br><br>「喜歡上唯君的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我其實也、不想再被換掉了......」<br><br>一想到當時被課長所說的那句如同死刑的話，右手忍不住再次揪住了對方的衣料。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯睜大了雙眼，訝異地回望對上視線的翠綠。<br><br>好像感覺到了什麼不同以往的東西…<br><br>因為早就預設了這樣的關係難以突破，也知道那些行為可能永遠不會被接納，反而在看見了不同可能性的這一刻，那小小悸動才會如此清晰，泛起漣漪。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">儘管只是個可能性，不是一個確定的答案，仍是讓唯露出了燦爛的笑容。<br><br>「謝謝你，綠君…」<br><br>他稍稍摟緊了對方，將臉輕靠於綠的肩上、頸側，充份的，感受在自己懷中的真實。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">當耳畔響起那句話時，感受得到心臟小小的躍動，不知道自己是等待了多久，才能再一次被這樣溫柔地肯定。<br><br>眼眶不禁泛起了淚水。<br>「唯君......一輩子喔。」<br><br>或許是因為站在海邊，留下的淚液也跟著染上了鹹味。<br><br>依偎在對方懷中，這樣所想的自私自利的自己。<br>此時此刻，肯定是這世界上最過分的人。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，一輩子喔。」<br>細聲的回應彷彿會被吹撫而過的海風帶走一樣，但在這時卻清晰地傳入了綠的耳中，溫柔而毫無虛假。<br><br>感受到透進衣服的溼意，唯稍稍抬起一隻手，輕柔地撫摸對方的髮，一次又一次，沒有更多的言語，靜靜地傳達著「我就在這裡」、「我會陪著綠君」的訊息…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他的擁抱不自覺地收緊了些。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「知道了。」聽完後，忍不住破涕而笑了出來，「那唯君跟我都一起加油吧......」他抬起頭看向對方，，這時候突然想起了什麼。<br><br>「是說是不是要找什麼東西......」雖然打斷這個氛圍好像有點失禮......。<br>但已經太遲了，他已經說出口了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「之後也請多指教了，綠君。」<br>在綠抬起頭時，唯已經露出了和平常一樣溫煦的笑容，並且稍微鬆開了擁抱，讓對方可以自己決定什麼時候停止。<br><br>「要幫剛剛那位神秘的小姐找遺失的東西來著。」他眨了眨眼，視線來到附近那顆閃閃發光的東西上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「也請多指教，唯君。」朝著對方右臉頰輕輕吻了一下。<br>「今後也是。」雖然無法預知未來的，也不確定自己是否能夠撇開過去所發生的那些事情。<br><br>但至少——自己現在是想踏出去那一步的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「雖然不知道他真正的來歷是什麼......。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不過還是幫他一下好了。」難得露出了笑臉說著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯點點頭，在鬆開懷抱後，他仍是稍微護在綠的前面，打算先靠近那處反射出光芒的位置。<br><br>「不過這種不明不白的情境，還是要小心一點比較好。」先確認沒有顯見的危險，他才打算讓對方靠近。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們仔細的觀察了一下那個珠子，發現，珠子除了十分的漂亮，有著海藍色的光輝之外，並沒有什麼特殊之處。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">喰代在確認安全之後，彎下了腰，撿起了地上的珠子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不過，當喰代拿起玻璃珠後，珠子上便發出了一陣瑩瑩藍光，接著，四周陷入了一片寂靜之中。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們抬起了頭，看向了變得寂靜的海岸，接著，在海岸之上，看到了一陣宛如從過去映照於此刻一般的倒影。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那是一處位於都市中心的公園，你們對這個公園有著印象，似乎是曾經來過的地方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">有著墨色頭髮的，看上去大概10歲左右的孩子，追著一顆皮球，從公園中的石頭階梯之上跑了下來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們仔細分辨了一下之後，認出了那個孩子正是小時候的綠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，在下到最後一階樓梯時，小綠一個沒注意之下，踩到了地下掉落的樹根，意外的滑倒了……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你、你沒事吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">伴隨著一個有些擔心的聲音響起，畫面上出現了一名看上去與小綠年齡相仿，有著朱色頭髮的孩子，他身上的衣服有不少破洞，身上還貼著幾塊紗布。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">有著朱色頭髮的孩子撿起了地上的皮球，將它拿到了小綠的身邊，接著低下了頭，檢視起了小綠的傷勢。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">查覺到小綠的膝蓋因為跌倒而有些破皮之後，朱色頭髮的孩子開始翻找起了身上的東西，似乎打算看看有沒有什麼能派得上用場的東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就在這個時候，一名有著外國面孔的黑髮少女從樓梯上跑了下來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「小綠，你怎麼一個人跑到這裡了？大家都在找你耶！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊！你怎麼受傷了！得趕快去找急救站的姊姊才可以，快點，我揹你一過去吧！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這麼說完之後，黑髮的女孩便火急火燎的把小綠揹在了背上，並且向樓梯上跑去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在女孩的背上，小綠說道：「喂！小凜，等等，我還沒跟他道謝－－」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，他轉過頭，對著朱色頭髮的孩子問道：「謝謝你幫我撿起了球，我叫鐮塚綠，你叫什麼？要不要跟我們一起玩呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不過，面對小綠的提問，朱色頭髮的孩子低著頭，沒有馬上做出答覆。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">直到黑髮的少女揹著小綠上了樓梯，從視野之中消失之後，他才小聲地開口說道：「我的名字是……唯……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">－－－</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在這段畫面結束之後，海浪的聲音便重新回到了你們的耳中，而你們手上的珠子，也不再發出藍色的光芒，剛才那個，是錯覺嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">又或者是，已經記不清楚的……回憶？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">記憶又......<br>這到底是自己第幾次記憶錯亂了？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」仔細整理一下腦中的思緒，想了片刻，才緩緩開口，「唯君對......呃.......不對、剛剛的那些，唯君也有看到嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」<br>唯愣愣地看著海的方向，久久沒有反應。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…嗯，我也看到了。」然後才點點頭，看向自己手上的珠子，「以前的…」沒有把話說完，與其說他陷入了沉思，不如說是陷入了回憶。<br><br>不過很快又對綠露出了平常的淺淺笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「從以前、就知道我了嗎？」翠綠色的瞳孔外，長長的睫毛隨著細微的眨動輕顫。。<br><br>「唯君有想說的話嗎？」一起看向對方手中的物品，「有共同的回憶......這樣感覺也不錯呢。」他伸出了細長的手指，也輕輕的撫上了經過光芒折射的珠子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">垂眸望著手中的珠子以及對方指節分明的手指，唯思考著什麼而沉默了好一會，「小時候我都是一個人，那時候發現了你們都會在公園玩，所以也會過去看。」<br><br>不過到最後，他沒能跟綠或是公園的孩子們搭在一塊，就這麼默默地、遠遠地看著他們…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「第一次見到綠君就是在那個小公園，就算中間好一段時間不知道你去了哪裡，但我一直都記得喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「呃、嗯......」<br><br>耳畔除了海浪的拍打聲，順著繼續聽下去，每一字一句都從對方嘴裡溫柔的述出，飽含著眼前人對自己以往的思念。<br><br>不知道為什麼，內心感到了一些些的躁動，是害羞嗎？還是難為情呢？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><br><br>「抱歉，我沒記得......」<br><br>啊、又下意識的道歉了。<br><br></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就算只有我記得也沒關係，綠君不需要道歉。」相對於對方，唯並不介意綠有沒有記得那麼久遠以前的事情——只要自己還記得就可以了。<br><br>就算只是單方面的追著對方的蹤跡，循著氣味…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「接下來，還會有很多新的回憶呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們繼續向前走著，來到了岩礁地區，燈籠照射在了被海浪拍打的岩石間隙，你們注意到這裡有一顆被卡在縫隙裡的玻璃珠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯......」把舊的回憶丟掉，那些有關於庭師的、有關課長的......<br><br>「唯君、幫我忘記吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，忘記那些不好的事情，然後留下一些會想回想起來的回憶吧。」輕輕點頭，唯思考一會，伸出手牽起了綠的。<br><br>穩穩地、帶點力道，相似又有些不同的溫度相互傳遞。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「綠君也可以…讓我忘記一些事情嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好......、什麼事情？」真稀奇，沒想到對方也有不太好的回憶嗎......<br><br>說到底，這陣子都是自己再把垃圾情緒丟給對方，偶爾來聽聽好了......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯…」雖然綠答應了，但真的要開口時，唯又有點不知道該從哪裡說起，難得露出猶豫的神色。<br><br>就這樣望著對方躊躇了良久。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「…我好像，被丟掉了呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「聽不到了，那位大人的聲音。」<br><br>說完，可以看到他的表情有點微妙，那是他自己都不太清楚的情緒。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「欸？」<br><br>那位大人......啊、之前說到的那個嗎......<br>原來剛剛偶爾看到他會露出低落的表情是因為這件事情嗎......<br><br>「該怎麼說、嗯......這、這樣不是很好嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就......」<br>就像之前唯對自己所說的一樣。<br>他努力的回想當時所聽到的話語。<br><br>「這次......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「換我把你撿起來吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「把我…撿起來？」<br>愣愣地回看，腦袋第一時間好像還無法理解其中的意義。<br><br>他想告訴綠這件事情，但沒有想過會得到這樣的答覆。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那位大人…在我無依無靠的時候對我伸出援手，是遠比我的生父生母更讓人安心、能依賴的存在，如果沒有祂，我可能很小的時候就死了吧。」慢緩緩地說著，他執起綠的手，又用兩隻手溫柔地護在掌間。<br><br>「以前不知道該怎麼辦的時候…那位大人會告聆聽我的苦惱，告訴我該怎麼做，甚至是回應我的願望，但現在……」<br>垂下眸，他的目光落在綠的手上。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「現在我…」<br>深呼吸口氣，他壓下那股陌生的、讓人迷惘的不安，才再次與對方對上視線。<br><br>「只剩下綠君了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這樣真的是好的嗎？<br><br>看起來就和那時候的自己一模一樣——那種無助、痛苦，還有明知道不對卻還是想抓住某種事物的樣子。<br><br>雖然、這樣做、好像是錯的。<br>但是自己卻忍不住露出了笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這樣很好呢，唯只剩下我。」<br><br>被人需要的感覺逐漸被滿足，能感受到心情的重量，綠伸出了手抱住了對方，或許是第一次、－－－真的能夠感受到，那個已經被自己扭曲的愛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯靜靜地接受對方的擁抱，明明不是第一次擁抱，卻跟以往的每一次又好像有什麼不同——他不太確定，但能明確感受到的，便是實質的溫度不斷地傳遞過來。<br><br>如果是綠君的話…</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他慢慢伸出手，回以相同力道的擁抱，將頭輕靠於對方的臉側，喃喃著：「綠君，認為這是好事的話…」<br><br>「我會接受的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「請把我撿起來吧……我也希望我綠君是我的唯一。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......嗯。」僅僅只是輕聲地回應，擁抱的雙手並沒有落下。<br><br>自己所觸碰到的存在也逐漸因為自己的想法而漸漸暖化似，綠眨了眨自己的雙眼，瞳孔所倒映的是那頭溫粉色的短髮。<br><br><br>此刻，所洋溢的、<br>完全的佔有感－－在某個人眼裡，自己是不可缺少的一部分。<br><br>就像是可以掌握著他人人生似......</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我們繼續走吧，唯......」<br><br>原來是這樣子的感覺嗎......<br>他揚起了笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，不過，要找的東西好像就在那裡呢。」目光越過綠的肩膀之上，唯定定地看著不遠處、被卡在縫隙裡的玻璃珠，淺淡的色澤映入眼中。<br><br>他稍稍退開了擁抱，指著那顆玻璃珠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「為什麼會找這東西呢......」視線也落在那東西上，在熟悉的香味離開了自己身上後，他走了幾步，伸手想去觸碰那東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">當鐮塚拿起玻璃珠後，珠子上便發出了一陣瑩瑩藍光，接著，四周再一次的陷入了一片寂靜之中。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不過，這一次海潮之上浮現出來的，並不是過去的影像，而是如同一面可以斬斷春天的明鏡一般，映照著此刻站在海邊的你們二人的身影。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那是…現在的我們嗎？」疑惑地望著海面，唯抬起手隨意動了動，試試看虛幻的倒影會不會有相同的反應。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在你行動之後，虛幻的倒影也跟著有了相同的反印，看來，就如同你所想的一樣，這顆珠子所映照的，正是你們的「現在」。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「看起來好像是鏡子？」是用了這種材質做成玻璃珠嗎......那這樣子好像不叫做玻璃珠？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在你們這麼思考著的時候，海浪的聲音便重新回到了你們的耳中，而你們手上的珠子，也不再發出藍色的光芒，剛才你們所見到的如同鏡子一般的景象也已然消失不見了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">再繼續往前走的話，就是淺灘的區域了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......這些珠子難道會保存我們的記憶嗎？」覺得說起來有些詭譎，不過現實層面來說的確是......<br><br>「唯、你覺得呢？」他瞇起眼睛，對著對方溫柔笑著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「記憶…」回望綠的雙眼，唯靜靜地思考一會，「剛剛第一顆能夠看到過去，這一顆能夠看到現在，下一顆……會不會是、未來？」<br><br>「只是那樣就不是記憶了。」他眨了下眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「要去看嗎？你跟我的未來？」聽完後，沒有特別驚訝，只是靜靜凝視著對方的雙眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">短暫的停頓，他接著又露出笑容，點點頭。<br><br>「當然，一起去看看吧。」<br><br>沒有什麼好猶豫的，因為已經決定好了。<br>決定接下來會跟綠君一起走下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">繼續跟著對方往淺灘走，想看看是不是如兩人猜想，未來的玻璃珠就在這裡......<br><br>「唯、你說過你只剩下我了對吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們在淺灘上前進著，當手上的燈籠照向黑暗的海水時，你們發現，在那裡有藍色的光芒在閃爍著。<br>只要稍微將手伸入水中，就能夠得著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我是那麼說的。」<br>注意到海中反射的微光，唯將手上的燈籠提高並靠近一點，讓兩人都能清楚看見在水面之下的珠子。<br><br>他再次看向綠，等待對方說完。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不想再受傷、<br>但又想全然的付出和相信、<br>人類或者又是自己的天性......<br><br>「......那唯、願意為了我戴上項圈嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">他輕輕地撫著對方的脖子，若有所思地笑著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「可以喔。」幾乎是沒有思考就直接回答了。<br><br>唯理所當然地說著，微微瞇起紅眸同樣映著燈籠的幽光，他輕柔地觸碰上綠正撫著自己頸項的手。<br><br>「綠君希望的話，我會戴上的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」<br>被圈養、被套牢......<br>更加無法言喻的......<br>比這些還要更明確的「歸屬」。<br><br>手指所撫摸的位置，彷彿就像是一個圈環。<br><br>自己終於打從心底，滿意地笑了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我希望、......」<br><br>連敬語都不再加予的姓名，已經近乎甜美的束縛感充斥著腦海。<br><br>「回去再買吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好…」臉上的笑意未減，深深凝望著眼前的綠，從未見過的滿足神色刻入了腦海，唯輕輕頷首、允諾。<br><br>「那麼，我們的『未來』……也由綠君撿起吧？」<br>良久，他才重新望向埋於浪潮之間的晶瑩，等待對方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">聞言，他沉下了眼，瞳孔中似乎隱約閃爍著浪潮反射的微光。<br><br>「由我來嗎……？」他的聲音輕得幾乎像是對自己問話似，忐忑不安的情緒瞬間湧了上來，如果，呈現出來的是黑色，或者是空無一物怎麼辦？<br><br>這樣的自己，會不會什麼也沒有，最後也得不到什麼.....</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唯陪我一起.......」請求、又或者只是逃避的藉口。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">臉上的笑容變得更加柔和，唯將燈籠維持在同樣的位置，往綠的方向湊近。<br><br>老實說，不管會映照出什麼樣的「未來」，他都不認為這會改變什麼。<br>或至少，他並不打算改變。<br><br>血紅的目光倒映著翠綠。<br>唯伸出空著的手，與對方一同。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「一起。」就和以往的每一次相同，陪伴著綠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們兩人一起，向著那最後的一顆珠子伸出了手。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在內前方所握住的，是否是你們未來的命運呢？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">抱持著這樣忐忑的想法，你們的手觸碰到了玻璃珠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在那瞬間，四周再次陷入了一片死寂之中－－</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">然而，僅一瞬間，那片死寂便化為了恐怖的雜音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那是一個黑暗而帶著血腥氣息的黑暗的長廊，在四周的牆上，散落著一些用途不明的機械結構。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們兩人背靠著背站在了一起，身上配戴的結飾閃爍著微光。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">綠的手中所握持著的，是本以為再也不會觸碰的，名為新南部M60的手槍。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯的手上所拿著的，則是所剩無幾的肉塊以及慣用的刀子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">除了你們二人以外，在場別無他「人」。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">一個握持長刀，看不清樣貌的人背對著你們倒在了你們前方的甬道之中。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">而在他的屍首之上，數之不盡的看起來曾經是「人」的怪物正在向著你們湧來。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們與眼前的怪物們搏殺著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">最後，你們似乎隱約聽到了，從怪物們湧來的方向，傳來了槍械開火的聲音－－</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，畫面便結束了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這真的是未來的片段嗎？抑或是，只是某種具有著心相意義的幻象？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">總而言之，那絕不是你們的終幕，你們的心中隱隱有著這樣的感覺。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......」不知道該說些什麼，只是眼愣愣的望著珠子，再看向眼前的人。<br><br>「又要，再次拿起那把……不屬於自己的東西嗎？」槍、斷送了前輩的生命......<br><br>扣下扳機的下一秒，命中了課長摯愛之人。<br>那槍聲，仍然無法忘懷……</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」唯凝視著幻影消散的位置，他沉默無語，前一刻得柔像是不曾存在過一般，徒留獵食者般銳利的鋒芒，帶著高度的警戒，以及，罕見的殺意。<br><br>良久，他垂下眸，盯著那顆珠子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「命運嗎......」深深吸了一口氣，「唯知道嗎？曾經有這麼一說......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「並不是因為這個世界存在，人類才得以存在，也不是因為人類存在，這個世界才得以存在。兩者之間並無先後關係，存在的，僅是奇妙的緣分與因果。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不要緊的，現在已經有唯陪我了......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這是什麼意思呢？<br>唯並不是很確定自己有沒有明白，但是如果說到緣分與因果……他是相信的。<br><br>因為「證明」，就在自己眼前。<br>活生生的，證明。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，我會在綠君身邊的。」慢緩緩地眨了下眼，唯重新露出笑容，他的手包覆著對方拿著珠子的手。<br><br>「不管未來會遭遇什麼，我都會在這裡。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「東西也好像找齊了呢，我們回去還給對方吧，唯。」雖然不知道這是什麼魔術......不過在零課時，早已遇過很多不可思議的事情了。<br><br>不過剛剛那幻象是怎樣......<br>代表未來會、毀滅嗎？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「走吧。」輕輕點頭，提好了燈籠站在綠的身旁，唯讓光照保持在兩人前方的路上。<br><br>如果，那是可能的未來，<br>就必須做好準備才行。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們沿著被夜色包裹的海灘，在細沙之上漫步，LED燈的燈光映照在海水之上，使夜晚的海灘看起來有如一閃一閃的銀河一般。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不久之後，你們回到了當時遇到克蘿托的地方，看到少女依然在黑夜之中站在原來的地方。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">或許是聽到了你們踏沙而來的聲音，少女轉過了頭，面向了你們的方向。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「歡迎回來。你們有找到玻璃珠嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這些應該就是你遺失的東西吧？」將物品都歸還給對方，「雖然不知道你到底是誰、或者說有什麼目的......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">唯靜靜地站在綠身邊，在綠物品歸還時，再看了眼那三顆玻璃珠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">當你們將找到的玻璃珠交給她時，克蘿托露出開心的微笑。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊，太好了。謝謝你們。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個我很喜歡的，真的幫了我大忙呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">她這麼說著，頸間不知何時已經佩戴上修好的項鍊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那條項鍊閃耀著藍色的光芒，反射著星光。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「既然你們都幫我找到了，當然，說好要給些謝禮也必須要給你們才可以呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">克蘿托這麼說著，不知道從哪裡拿出了兩條編織帶般的東西。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那是像晴朗夜空般深藍色的組紐，上面鑲嵌著閃耀星光的玻璃珠。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個送給你們。是護身符喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這是為了讓你們之間的緣分不會分散的護身符。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「今天真的很開心。謝謝你們陪我一起玩。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">將編織帶交給你們後，克蘿托露出一抹惡作劇般的笑容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">下一瞬間，她的身影忽然消失了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">只留下你們兩人站在原地，呆然地望著那空無一人的沙灘。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">那麼，接下來是繼續夜晚的散步，還是……？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">夜色依然深沉。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們彷彿聽見了潮聲輕聲低語，像是在對你們調皮地捉弄著什麼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">通關：SAN值回復1d5<br>每找到一顆玻璃珠：SAN值回復1d5（最多3d5）<br>※若PC不需要回復SAN值，也可以將回復值轉換成任意技能的成長點數。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">AF：紡織緣分的結飾<br>由如夜空般深藍的組紐編織而成，鑲有閃爍銀光的小玻璃珠。<br>散發著淡淡的海之香。<br>擁有此物的兩位親密之人，無論身處多深的黑暗，甚至是在死後的世界中，也必定能找到彼此。<br>因為你們所編織出的緣分之線，是如此堅強而牢固。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">『凌晨兩點，來找我吧－完』</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">3D5 (3D5) ＞ 8[2,4,2] ＞ 8</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 37 → 45</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D5 (1D5) ＞ 2</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 鐮塚綠 ] SAN : 45 → 47</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">3D5 (3D5) ＞ 12[3,4,5] ＞ 12</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">1D5 (1D5) ＞ 3</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9 noImg">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 喰代 唯 ] SAN : 29 → 44</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊......走掉了......」有些嚇到。<br>看著手上的物品，看起來像是紀念品。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「緣份…」跟著看向了手上的物品，唯呢喃著。<br>從在那小小的公園見到對方的那一天開始，到現在，他們住在同一個屋簷下，這些都是…</div>
+</div>
+</div></div><!--EOS-->
+
+</body>
