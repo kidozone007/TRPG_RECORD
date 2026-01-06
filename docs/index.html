@@ -5,10 +5,12 @@
 <title>Index</title>
 
 <style>
+/* 外層固定，不產生滾動條 */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;  /* ← 防止外層出現捲軸 */
   background: #454752;
   color: #eee;
   font-family: Arial, "Microsoft JhengHei", sans-serif;
@@ -51,7 +53,7 @@ iframe {
     <iframe src="layout.html" name="menu"></iframe>
   </div>
 
-  <!-- 主頁內容 -->
+  <!-- 右側內容 -->
   <div class="content">
     <iframe src="home.html" name="content"></iframe>
   </div>
