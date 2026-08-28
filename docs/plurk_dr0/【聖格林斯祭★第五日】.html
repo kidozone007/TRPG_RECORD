@@ -1,0 +1,2253 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="【聖格林斯祭★第五日】">
+<meta property="og:description" content="">
+<title>【聖格林斯祭★第五日】</title>
+<style>
+h1{ color:white; margin: 5px 0; }
+body{ background:#454752; }
+._subtitle { color:#ddd; margin:5px 0 20px 0; }
+._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
+._hidden { display:none; }
+
+/* 主容器：垂直排列 */
+.center { 
+  display:flex; 
+  flex-direction:column; 
+  align-items:flex-start; 
+}
+
+#_main { display:flex; flex-direction:column; align-items:end; }
+
+/* ★ 所有 script 區塊置中（title / talk 共用） */
+._script {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+._halt { padding:30px 0; }
+._bgImg { text-align: center; }
+._bgImg img { max-width: 800px; }
+
+/* talk 本體 */
+._talk {
+  margin:5px 0;
+  display:flex;
+  border:1px solid black;
+  background:#1e1e1e;
+  color:#eee;
+  width:100%;
+  max-width:1080px;
+  border-radius:5px;
+}
+
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+
+._actorName{
+  padding:5px 10px;
+  height:20px;
+  font-size:18px;
+}
+
+._actorImg {
+  margin:6px;
+  width:110px;
+  height:110px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:#2a2a2a;
+}
+
+._actorWords {
+  margin:5px;
+  background:#2a2a2a;
+  font-size:1.1rem;
+  padding:10px;
+  height:calc(100% - 60px);
+  border-radius:5px;
+}
+
+._sectTitle { border-radius:5px; margin-bottom:5px; }
+
+/* ===== noImg 處理 ===== */
+._talk.noImg {
+  display: block;
+  margin: 5px 0;           /* ★ 與一般 talk 間距一致 */
+}
+
+._talk.noImg ._leftCol { display: none; }
+._talk.noImg ._rightCol { width: 100%; }
+._talk.noImg ._actorImg { display: none; }
+
+/* ===== RWD ===== */
+@media only screen and (max-width: 400px) {
+  ._leftCol { width:100px; }
+  ._rightCol { width:calc(100% - 100px); }
+  ._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
+}
+
+/* 其他頻道（目前隱藏） */
+._talk.otherCh {
+  width:calc(50%);
+  text-align:right;
+  margin-left:auto;
+}
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
+._talk.otherCh ._actorWords { background:black;color:white; }
+
+/* 純圖片 */
+._talk.imgOnly ._imgOnlyWrap {
+  width: calc(90%);
+  margin: 6px;
+  background: #2a2a2a;
+}
+._talk.imgOnly ._imgOnlyWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== 區段標題框 ===== */
+._script[data-type="title"] ._titleBox {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 10px 15px;
+  margin: 30px 0 0 0;     /* 上距較大，下距貼近 talk */
+  border-radius: 5px;
+  border: 1px solid #555;
+  text-align: left;
+  width: 100%;
+  max-width: 1080px;
+  box-sizing: border-box;
+}
+
+/* 自定義生成 */
+._actor_0 ._actorName { color: #888888; }
+._actor_0 ._actorName::after { content:" "; }
+._actor_0 ._actorImg { background-image:url(); }
+
+._actor_1 ._actorName { color: #888888; }
+._actor_1 ._actorName::after { content:"七天的魔法使"; }
+._actor_1 ._actorImg { background-image:url("https://avatars.plurk.com/17006389-big64984036.jpg"); }
+
+._actor_2 ._actorName { color: #888888; }
+._actor_2 ._actorName::after { content:"七天的魔法使"; }
+._actor_2 ._actorImg { background-image:url("https://avatars.plurk.com/17006389-big64984036.jpg"); }
+
+._actor_3 ._actorName { color: #BA8FBE; }
+._actor_3 ._actorName::after { content:"亞森=羅苹"; }
+._actor_3 ._actorImg { background-image:url("https://avatars.plurk.com/17008974-big73841156.jpg"); }
+
+._actor_4 ._actorName { color: #888888; }
+._actor_4 ._actorName::after { content:"昆特=伯列史特"; }
+._actor_4 ._actorImg { background-image:url("https://avatars.plurk.com/17006446-big64987273.jpg"); }
+
+._actor_5 ._actorName { color: #888888; }
+._actor_5 ._actorName::after { content:"羅莎=哈里斯"; }
+._actor_5 ._actorImg { background-image:url("https://avatars.plurk.com/16934152-big67909839.jpg"); }
+
+._actor_6 ._actorName { color: #BA8FBE; }
+._actor_6 ._actorName::after { content:"楪 世流"; }
+._actor_6 ._actorImg { background-image:url("https://avatars.plurk.com/16335600-big73726262.jpg"); }
+
+._actor_7 ._actorName { color: #E41227; }
+._actor_7 ._actorName::after { content:"奧萊希亞=馮=薩爾札"; }
+._actor_7 ._actorImg { background-image:url("https://avatars.plurk.com/17008984-big66147697.jpg"); }
+
+._actor_8 ._actorName { color: #BA8FBE; }
+._actor_8 ._actorName::after { content:"絲妲蓋茲=派伊"; }
+._actor_8 ._actorImg { background-image:url("https://avatars.plurk.com/15111464-big64939560.jpg"); }
+
+._actor_9 ._actorName { color: #63C6D3; }
+._actor_9 ._actorName::after { content:"烏丸 大彌"; }
+._actor_9 ._actorImg { background-image:url("https://avatars.plurk.com/16934039-big65054149.jpg"); }
+
+._actor_10 ._actorName { color: #BA8FBE; }
+._actor_10 ._actorName::after { content:"莉莉絲=裴爾"; }
+._actor_10 ._actorImg { background-image:url("https://avatars.plurk.com/16917542-big65320892.jpg"); }
+
+._actor_11 ._actorName { color: #0A9C17; }
+._actor_11 ._actorName::after { content:"伊恩凱特=柏格=蘭德爾"; }
+._actor_11 ._actorImg { background-image:url("https://avatars.plurk.com/8641041-big73566334.jpg"); }
+
+._actor_12 ._actorName { color: #E41227; }
+._actor_12 ._actorName::after { content:"卡蜜拉=巴克萊"; }
+._actor_12 ._actorImg { background-image:url("https://avatars.plurk.com/17012738-big65176391.jpg"); }
+
+._actor_13 ._actorName { color: #FF9B65; }
+._actor_13 ._actorName::after { content:"八木 曼珠"; }
+._actor_13 ._actorImg { background-image:url("https://avatars.plurk.com/15114324-big72058800.jpg"); }
+
+._actor_14 ._actorName { color: #FFA59A; }
+._actor_14 ._actorName::after { content:"伊莉莎白=安潔利斯"; }
+._actor_14 ._actorImg { background-image:url("https://images.plurk.com/69xWGr8wjijheBQLMDsKLJ.png"); }
+
+._actor_15 ._actorName { color: #0A9C17; }
+._actor_15 ._actorName::after { content:"瑪莉"; }
+._actor_15 ._actorImg { background-image:url("https://avatars.plurk.com/16709458-big95901318.jpg"); }
+
+._actor_16 ._actorName { color: #E41227; }
+._actor_16 ._actorName::after { content:"修=沃克"; }
+._actor_16 ._actorImg { background-image:url("https://avatars.plurk.com/16356508-big73851250.jpg"); }
+
+._actor_17 ._actorName { color: #2264D6; }
+._actor_17 ._actorName::after { content:"費迪南=夏爾=桑松"; }
+._actor_17 ._actorImg { background-image:url("https://images.plurk.com/6W8E84K181SHGBfwa2TXxm.png "); }
+
+._actor_18 ._actorName { color: #E41227; }
+._actor_18 ._actorName::after { content:"威爾森 = 格林斯通"; }
+._actor_18 ._actorImg { background-image:url("https://avatars.plurk.com/9723441-big69367365.jpg"); }
+
+._actor_19 ._actorName { color: #2264D6; }
+._actor_19 ._actorName::after { content:"雪莉=伊莎貝拉"; }
+._actor_19 ._actorImg { background-image:url("https://avatars.plurk.com/16372920-big65118617.jpg"); }
+
+._actor_20 ._actorName { color: #888888; }
+._actor_20 ._actorName::after { content:"克雷森=克里德"; }
+._actor_20 ._actorImg { background-image:url("https://avatars.plurk.com/17011402-big69405306.jpg"); }
+
+._actor_21 ._actorName { color: #888888; }
+._actor_21 ._actorName::after { content:"拿倫"; }
+._actor_21 ._actorImg { background-image:url("https://avatars.plurk.com/16997583-big64679298.jpg"); }
+
+._actor_22 ._actorName { color: #E8AF37; }
+._actor_22 ._actorName::after { content:"希里安=艾恩斯"; }
+._actor_22 ._actorImg { background-image:url("https://avatars.plurk.com/17011217-big69322277.jpg"); }
+
+
+
+.otherCh{ display:none; }
+</style>
+</head>
+<body class="center">
+<div class="_hidden">
+<version>hazmole_v1.0</version>
+</div>
+<body class="center">
+
+<div class="_script" data-type="title">
+  <div class="_titleBox">【聖格林斯祭★第五日】</div>
+</div>
+<div class="_subtitle"></div>
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【聖格林斯祭★第五日】<br />祭典的第五天，街道上掛滿了各式的時鐘，街旁的攤販也都賣起了跟鐘錶相關的物品，也有販賣太陽與月亮造型的燈飾之類的物品。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">到了晚上6點多，你們來到了街上，準備今天的花車遊行。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">◆◇◆◇◆</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/735b37f647a410b760088acd7d1a3fc9_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/4beb69fe0b28f7d49ca2eb30b2ce5712_w20_h20.gif" width="20" height="20"> 「哇，看我看我！」一直朝手。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/5e482d43a754cd448ff67c6c5a4af3f6_w23_h35.png" width="23" height="35"> 過來看花車遊行。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/6b0aa86715eb1a76f005a12442854b23_w20_h20.gif" width="20" height="20"> 覺得花車的精彩度<img src="https://s.plurk.com/emoticons/random/b7211fe31f31a313972b.png" class="emoticon" alt="(dice10)" rndnum="10"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20"> 萬分精彩看的目不轉睛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/05b5069c807d4bf9e52793965fc49481_w48_h44.jpg" width="48" height="44">  <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20"> 「人好多啊？」<br /><img class="emoticon_my" src="https://emos.plurk.com/f17a06cef53d8766cca8446622231cf5_w46_h48.jpg" width="46" height="48"> 「畢竟是多年一次的活動呢，要小心別走丟喔。」<br /><img class="emoticon_my" src="https://emos.plurk.com/5c6acfda5ebaf2487fdc466323b9a038_w48_h44.jpg" width="48" height="44">  <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20"> 「威廉哥哥才是呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/6355f9d6f5093bb769f230e4a6c2cce6_w20_h35.png" width="20" height="35"> 牽著弟弟的手在看遊行。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/bei_dangan" class="ex_link">▸【羅莎=哈里斯】</a>: 注意到<img src="https://s.plurk.com/emoticons/random/d4ab31cf460a3561ae4a.png" class="emoticon" alt="(lots)" rndnum="5"><br /><a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a>: 注意到<img src="https://s.plurk.com/emoticons/random/c1e3d416fda7b3022d7d.png" class="emoticon" alt="(lots)" rndnum="2"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/7c89118cad9b5dd4590306c61079b69d_w48_h48.png" width="48" height="48"> 「上次在咖啡店看過的變態！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/f7e582ff65397c09652a0f58337d7853_w48_h48.png" width="48" height="48"> 「唉呀，聖格林斯祭真是熱鬧呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/6faa74312d4678e60aa93ebcd234aac5_w48_h48.jpg" width="48" height="48"> 「哎？一見面就喊人變態真是獨特的招呼方式呢。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/3d60a747e6dc3e17aa50a2c557996196_w48_h48.png" width="48" height="48"> 「變態哥哥好？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/663b8eb2cdcaa285398e9a265ae0f99e_w48_h48.png" width="48" height="48"> 「好熱鬧啊！」很開心的看著<br /><img class="emoticon_my" src="https://emos.plurk.com/0a417f85da81ba3ed736d58ef0e30756_w48_h48.png" width="48" height="48"> 「小心不要撞到人了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/c17965ef578f573896fc7b9d2b4c019b_w23_h35.png" width="23" height="35">  來看花車遊行</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/b140a04962e024a9ba461ca3cad07373_w24_h35.png" width="24" height="35">  帶著員工一起觀賞，但身高太矮了看不清，便叫人把自己抱起來。<br /><img class="emoticon_my" src="https://emos.plurk.com/00b8e4bd23340adc42e31bd887e2d3aa_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20">  燈飾好漂亮好想收集。（？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/8d7ab8e0baa987b3f57ea570bb47bfc8_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/c2c2f456286d1e8c57f0da3cb4333854_w48_h48.png" width="48" height="48"> 「ＷＯＷ，從來沒有見過這麼精采的遊行呢！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br />注意到<img src="https://s.plurk.com/emoticons/random/19aaf586d123ed95a4d9.png" class="emoticon" alt="(lots)" rndnum="3"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/36e77c8b3dcce49661ca92df229e6d54_w48_h48.jpg" width="48" height="48"> 「嗯，你好喔。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/b7b5a99d1990cd851839c8472249e663_w48_h48.jpg" width="48" height="48"> 「你一個人出來逛？」一邊說著手上變出了一朵花遞上前。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/d3a7067d548c00febc426cd3b423cd11_w48_h48.png" width="48" height="48"> 「那個賣大麻的！」大叫。（並沒有</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/2d93ab13e6fbf866b4ee330220e23efa_w48_h48.png" width="48" height="48"> 「一個人喔。」收下了花，警戒心<img src="https://s.plurk.com/emoticons/random/d003351e1793294885d7.png" class="emoticon" alt="(dice20)" rndnum="6"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/91e6446f75e1b0201eb1962498f86fcc_w48_h48.png" width="48" height="48"> 「好漂亮呢，謝謝，也讓我叫你哥哥吧。」拿著花晃來晃去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/fa93c76a942315737f807a49215970cc_w48_h48.jpg" width="48" height="48">  「不是大麻啦~~~是<b>能量飲料</b>~~~~」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/2d93ab13e6fbf866b4ee330220e23efa_w48_h48.png" width="48" height="48"> 「原來如此啊。」<br /><img class="emoticon_my" src="https://emos.plurk.com/d3a7067d548c00febc426cd3b423cd11_w48_h48.png" width="48" height="48"> 「希望我長大也能吃吃看大麻，聽說吃了之後就會跟能量飲料一樣呢。」<strike>聽人家說話好ㄇ</strike></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/6276af31b90c9a9c012946ee96e906ef_w48_h48.png" width="48" height="48"> 「還是不要嘗試大麻比較好喔，那對身體跟精神都不好喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/b7b5a99d1990cd851839c8472249e663_w48_h48.jpg" width="48" height="48"> 「嗯，可以喔，我的稱乎不嫌多的。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/6faa74312d4678e60aa93ebcd234aac5_w48_h48.jpg" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19"> 好像聽到奇怪的對話，但沒有想管。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0dc0a498765363afbafc2c9ceebc1c09_w21_h35.png" width="21" height="35"> 混在人群裡看花車表演。人這麼多總不會出bug只波及到自己吧（幹）。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/1a2b3b5698558c6460a0f9a6cdc3e1c8_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/5750e155da4be899f4db4486f62036a8_w20_h20.gif" width="20" height="20"> 「真是熱鬧。」今天也是跟著 <a href="https://www.plurk.com/quentin_bereishit" class="ex_link">▸【昆特=伯列史特】</a> 走，當一個稱職的助手。<br /><br class="double-br" /><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/e7f8ca45bc838d366e7b72bc286b532d_w48_h48.png" width="48" height="48"> 「大麻在英國是不合法的，還請小姐您注意。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/ace6124fbd75282841158e59de19afa2_w23_h35.png" width="23" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/4715b4fa47960bcb837ef99e1e9ed5e9_w48_h48.png" width="48" height="48">  「哇、遊行耶！」<br />要是姊姊能一起來就好了，一個人四處亂竄亂看。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/ca35d2fdb076318f134eb97e84e60de7_w48_h48.jpg" width="48" height="48">  「想知道飛行的感覺可以來找我喔~」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/Camila__" class="ex_link">▸【卡蜜拉=巴克萊】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/3d60a747e6dc3e17aa50a2c557996196_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20"> 「原來英國是不合法的......」<br /><img class="emoticon_my" src="https://emos.plurk.com/7c89118cad9b5dd4590306c61079b69d_w48_h48.png" width="48" height="48"> 「姊姊妳好漂亮喔～」轉話題晃來晃去。<br /><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/3d60a747e6dc3e17aa50a2c557996196_w48_h48.png" width="48" height="48"> 「難道你是魔法師嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/432fc2189ade0a9163ace5ad16da4c46_w48_h48.jpg" width="48" height="48">  「我是夢想與希望的魔法使哦~~~」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/7c89118cad9b5dd4590306c61079b69d_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/6d811c076c285e4680170323040fdf98_w15_h15.gif" width="15" height="15"> 「那你會當上英國首相嗎？」？？？？？？？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/4967ee5c39c23295519e965351618e66_w48_h48.png" width="48" height="48"> 「是的，畢竟大麻在英國也算是一種毒品，想不犯法地享受大麻可能要去其他地方了。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/1a2b3b5698558c6460a0f9a6cdc3e1c8_w48_h48.png" width="48" height="48"> 「謝謝您的稱讚，可愛的小姐。記得您是上次也有參加的春花小姐吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/Camila__" class="ex_link">▸【卡蜜拉=巴克萊】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/d3a7067d548c00febc426cd3b423cd11_w48_h48.png" width="48" height="48"> 「你記得我啊～」<br /><img class="emoticon_my" src="https://emos.plurk.com/2d93ab13e6fbf866b4ee330220e23efa_w48_h48.png" width="48" height="48"> 「姐姐你也是要當英國首相的人嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">伊莉莎白和兩名侍女站在人群中，一旁的安琪拉指著花車，像個孩子般興奮，安德莉亞無奈的壓著矮小的安琪拉要她安分一點。<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/92d30fff14e522b7990ba83ce002d180_w48_h48.png" width="48" height="48">  「安德莉亞，難得出來就不要限制安琪拉了。」看著兩人的互動，伊莉莎白在一旁笑著說道。<br /><br class="double-br" />「……我知道了。」安德莉亞無奈的放開了手，安琪拉差點因為失去重心跌了出去，還好有伊莉莎白拉著她的手。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/117762168a65eb678b4f6cfc53a24a24_w20_h20.gif" width="20" height="20">  躲在人群中好奇的看，這是她第一次看花車，但這幾天祭典下來買了好多伴手禮，她開始猶豫要怎麼和主人報支，小腦袋瓜流轉萬般心思，導致看著花車雖然內心雀躍，卻沒甚麼笑容表現。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/1a2b3b5698558c6460a0f9a6cdc3e1c8_w48_h48.png" width="48" height="48"> 「那是當然的，我對我的記憶力還挺有自信。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/4967ee5c39c23295519e965351618e66_w48_h48.png" width="48" height="48"> 「不是，我可沒有那麼宏大的理想。不過若然可以的話我也想嘗試當英國首相的助手，倒是春花小姐想成為首相嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_16">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/f22543adbe236d0dac294760d22576ae_w48_h48.png" width="48" height="48">  斜倚在某個相對僻靜的巷口，一面盯著手中的書本、一面時不時往遊行的花車瞥去一眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_17">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/e5e07ada785c78664ecffb76493cba9d_w20_h35.png" width="20" height="35"> 在攤販旁挑選著鐘錶，不實的也會看一眼花車遊行，不過比起花車遊行，對攤位更感興趣。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/Camila__" class="ex_link">▸【卡蜜拉=巴克萊】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/ceaea541981aacc38856821413ef5b99_w48_h48.png" width="48" height="48"> 「當首相的話......」<br /><img class="emoticon_my" src="https://emos.plurk.com/91e6446f75e1b0201eb1962498f86fcc_w48_h48.png" width="48" height="48"> 「我想把這個世界變成只有哥哥還有姊姊的夢想世界。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/without_5" class="ex_link">▸【瑪莉】</a>: （搭訕？）<img src="https://s.plurk.com/emoticons/random/19aaf586d123ed95a4d9.png" class="emoticon" alt="(lots)" rndnum="3"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/without_5" class="ex_link">▸【瑪莉】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35"> 「怎麼啦？花車不好看嗎？」發現了在人群中好像很好奇卻又沒什麼笑容的你，戳戳你的肩膀問道。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_18">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:  <img class="emoticon_my" src="https://emos.plurk.com/a811403cf08401c0626ee26b5d05c611_w21_h35.png" width="21" height="35">  探頭看花車上面有人嗎。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_19">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52898e88a65bc23bab0731e2e587b530_w18_h35.png" width="18" height="35"> 讓人偶推著輪椅來看遊行。<br />「好熱鬧呀。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就這樣，不知不覺間，時間來到了晚上七點。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「噹－－噹－－噹－－」<br />大笨鐘的鐘聲敲響，不知不覺，其數來到了七。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，在這一刻，暮色的天空溶解了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">像是被融化的巧克力般，五彩斑斕的漆黑像是水流般逐漸褪下，在那之外，能看到的是閃爍著星光的表世界的夜空。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">一股像是身體浸入了水中的感覺滲透進了你們的身體之中，在那一瞬間，你們恍惚的誤認為自己溺水了，但是什麼都還來不及認知到，一切便恢復了正常。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「匡噹－－」<br />有什麼墜落在地上的聲音。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">回過頭去，你們看到了騎著掃帚的魔法師墜落在了地上。<br />這並不是個案，很快的，你們看到了原先藉由魔法懸浮在空中的事物如大珠小珠落玉盤般盡數墜落在地。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們感覺身上似乎少了什麼，在身上一陣摸索，才發現自己身上的魔法石全都不翼而飛了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「虛幻的祭典到此為止－－」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「永恆的盛宴揭開序幕－－」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「歡迎各位來到我的世界。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">接著，一個長相奇特的生物出現在了你們的面前。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「呦。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">看上去非常的可愛。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">◆◇◆◇◆</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"> 「你這個麻、麻糬？！」驚恐音量<img src="https://s.plurk.com/emoticons/random/68e84d60c39fde1936c3.png" class="emoticon" alt="(dice20)" rndnum="15"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「是海兔啦！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/fa93c76a942315737f807a49215970cc_w48_h48.jpg" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/51c0dc456bc66dfafb6795253673b0fa_w48_h48.png" width="48" height="48"> 戳一下</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/3e3faaaafe056d63461e19ab36fdf2b1_w48_h48.png" width="48" height="48">   「什麼叫你的世界？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/d3a7067d548c00febc426cd3b423cd11_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/6d811c076c285e4680170323040fdf98_w15_h15.gif" width="15" height="15"> 「我知道了，是一種表演對吧？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/bed0f293d56e66ddac9ad245e049b42d_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"> 「啊！發生什麼事情了？！請問您又是誰？」尖叫聲<img src="https://s.plurk.com/emoticons/random/1f4ff46f9aec7d78d0b6.png" class="emoticon" alt="(dice20)" rndnum="12"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>: 牠突然張大了嘴，吃掉了你的手，一陣鮮血從你的手中噴湧而出。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/d2db6f4a165346497c279472dcc7060f_w48_h48.png" width="48" height="48">  「安琪拉、安德莉亞，你們躲在我背後。」伊莉莎白將兩人護在身後。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> ？！？！？！？！！？！？！？！？！？！？！？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_21">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/28db6c1f1c96159e06672a224fb3bd82_w48_h48.png" width="48" height="48">  :這是整人節目?</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/6d79c08437856e39bd4493116c2bb14a_w48_h48.png" width="48" height="48">  「？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/82f014b0e9260c0f9da6a24dcc01f23f_w48_h48.png" width="48" height="48"> 「我的王之力啊！！！！！！！！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/bei_dangan" class="ex_link">▸【羅莎=哈里斯】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/3e8b8179f8d7a387021b2d5b95acaf15_w20_h20.gif" width="20" height="20"> 「很好看但現在很奇怪。」眨著眼望著你，並沒有被剛剛的景象嚇到。<br /><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35"> 「他長得好惡趣味。」指著海兔說。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/ace6124fbd75282841158e59de19afa2_w23_h35.png" width="23" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/88348d8b6edc5419f92bb9c29cc16ffa_w19_h19.gif" width="19" height="19">  「遊行的表演？我都不知道遊行的吉祥物是海兔！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/3e3faaaafe056d63461e19ab36fdf2b1_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/9bc07299d13c550b56cf4b98ac37b409_w48_h48.png" width="48" height="48">  「別動，我要開槍了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>: 接著，你試著伸出你的手，才發現你的手還存在著。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/5a21687f382b1bef7e87e764c3ac13e5_w20_h20.png" width="20" height="20"> 「⋯蛤？」<br />不爽度：<img src="https://s.plurk.com/emoticons/random/cc5a5024f251b5ba6917.png" class="emoticon" alt="(dice20)" rndnum="16"><br />覺得可疑海兔的可愛度：<img src="https://s.plurk.com/emoticons/random/80a733a872c058570607.png" class="emoticon" alt="(dice20)" rndnum="11"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「優西西西西西，這次只是給你個警告，下次就會是真的了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/without_5" class="ex_link">▸【瑪莉】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19"> 「我也這麼覺得。」認同你對可疑海兔的評斷。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「勸你們是不要亂碰我，小砸逼。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/c474f86421a255dfe459ecc0ad3983c9_w48_h48.png" width="48" height="48"> 「……請問您到底是？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/acae2ed232cb3c0435f1e80720147c25_w20_h20.gif" width="20" height="20"> 「警告什麼？我才想給你警告！」惡狠狠的瞪著你。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「唉呀，我還沒自我介紹嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/28043a512ac42be40476f2ac096e41fe_w48_h48.jpg" width="48" height="48"> 「你應該要掛個禁止觸碰的牌子才對，這很明顯的是你的疏失。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0dc0a498765363afbafc2c9ceebc1c09_w21_h35.png" width="21" height="35"> ......看起來超多人受害的，應該不是bug吧。<br />抓緊手上的玩偶警戒的看著奇怪的......海兔？他說是海兔欸那就是吧。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「優西西西西西，我是黑白海兔，從今天開始，你們可以稱呼我為主持人喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/28043a512ac42be40476f2ac096e41fe_w48_h48.jpg" width="48" height="48"> 「你應該要賠償我的精神損失才對。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/459ee9e126f38290eb8a3a5cb6aeb517_w20_h19.jpeg" width="20" height="19"> 「說話沒有禮貌。」<br />這在小女僕的常識顯然是很違背常理的。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/c774acdf2ee928a0783202fc4b939d77_w48_h48.png" width="48" height="48"> 「我想回家了......」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/6faa74312d4678e60aa93ebcd234aac5_w48_h48.jpg" width="48" height="48"> 「主持人？所以這是表演？你不知道讓我參加表演是很貴的嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/540881899fead2db3be32bca54cfc980_w48_h48.png" width="48" height="48">  抄起法杖在思考到底要不要砸下去，一旁的安德莉亞趕緊拉住了伊莉莎白的袖子。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/3e3faaaafe056d63461e19ab36fdf2b1_w48_h48.png" width="48" height="48">  「沒事我走了。」此地不宜久留，決定往離開的方向看。<br /><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_16">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52235300af649832e65b0ca7f0f0e803_w21_h35.png" width="21" height="35">  見到此時的突發狀況愣了愣，闔上書本收起來後快步走到 <a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>身旁。<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/327050fe035d059ce1b4fb6a041048ac_w48_h48.png" width="48" height="48">  「你的手還好嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/acae2ed232cb3c0435f1e80720147c25_w20_h20.gif" width="20" height="20"> 「主持什麼？能不能精準的把黑白兩半剖開的節目嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「這個可不是什麼，表演喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「整個倫敦都已經被我承包了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 「那個，這是甚麼表演嗎？我不想參加了。」大喊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_18">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/a811403cf08401c0626ee26b5d05c611_w21_h35.png" width="21" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/edb3ad0f5aea7f55fc20a7fefe88e441_w48_h48.jpeg" width="48" height="48">  被嚇到反射性想直接踩下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「現在的倫敦外面已經被我佈下了結界，沒有我的允許是不准離開的喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35"> 「承包⋯？可真有錢，那是不是應該來點生活費？——例如我的魔法石。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/99006ca2000594fc005df03ec6170e4d_w48_h48.png" width="48" height="48">  「那你允許一下吧。」？</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「優西西西西西，搭咩搭！現在，你們會不會感覺身上哪裡熱熱的呢？好像有什麼要出來囉？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_21">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/28db6c1f1c96159e06672a224fb3bd82_w48_h48.png" width="48" height="48">  :剛剛這裡關燈不是挺好的嗎,為麼不關久一點,我喜歡暗一點的空間.<br /><br class="double-br" />他對於現狀不是很在乎</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/tachibana_asaka" class="ex_link">▸【修=沃克】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/85c34178050b1dcbe4630d5517e7cab6_w48_h48.jpg" width="48" height="48"> 「看起來是沒什麼事～」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/acae2ed232cb3c0435f1e80720147c25_w20_h20.gif" width="20" height="20"> 「對你的怒氣嗎！？」顯然是快噴發了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就在這時，你們感受到了自己身上的某個部位傳來了一股像是被烙鐵灼傷一般的疼痛感。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/e2722fa3fe979fb64595653b114cf8ec_w48_h48.png" width="48" height="48"> 「請問您這樣是綁架嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(傳來灼燒感的部位是手部、臉部、腳部等能夠直接看到的部位。)</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_22">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/060dabc404966d6fab40b6646cf6293c_w23_h32.gif" width="23" height="32">  <img class="emoticon_my" src="https://emos.plurk.com/edb3ad0f5aea7f55fc20a7fefe88e441_w48_h48.jpeg" width="48" height="48"> 雖然目擊到可怕的事情，但更在意自己的東西被拿走。<br /><br class="double-br" /><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/9326047fe69579d37e3a407554c5d46b_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/3a2bb0fdea150fc86c955321a669e503_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/3e8b8179f8d7a387021b2d5b95acaf15_w20_h20.gif" width="20" height="20"> 「喂喂你們這群小偷，趕快<b>把魔法石還我</b>啊？？」話雖如此但也只敢動口不敢動手（幹</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/a2d48d89c45a79074390c0853763410b_w48_h48.jpg" width="48" height="48"> 「啊呀。」拉開手套看了一下自己的手背。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/8ba85d5642938fc726f66a5b9dc39f62_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/76c7ec8deca7e6a26064a4c9f47b9e69_w20_h20.gif" width="20" height="20">  「怎、怎麼了！怎麼還會痛，整人節目？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/5559324eb5af5685252856bf50e31e9c_w48_h48.png" width="48" height="48"> 「現在到底是……」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_16">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/7be0d6dd45c530fa35085638196913c8_w48_h48.png" width="48" height="48">  「看來是嚇唬人的技法。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/327050fe035d059ce1b4fb6a041048ac_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/33cd397db5c6e01e856ab792226b1170_w26_h26.gif" width="26" height="26">  「不過……」按住自己傳來燒灼感的臂膀，沒有再繼續說下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_22">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/060dabc404966d6fab40b6646cf6293c_w23_h32.gif" width="23" height="32">  <img class="emoticon_my" src="https://emos.plurk.com/edb3ad0f5aea7f55fc20a7fefe88e441_w48_h48.jpeg" width="48" height="48"> 「好熱....！！你們這是幹嗎了？？」焦慮的馬上查看一下自己發熱的手腳。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0dc0a498765363afbafc2c9ceebc1c09_w21_h35.png" width="21" height="35"> 「？」低頭看了一下發燙的手臂。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/1c0221dffc4c3d50d0c93fdd43272a6a_w20_h20.gif" width="20" height="20">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"> 「怎麼回事？」就連平時擦窗戶不小心摔到地上也沒有這麼痛，她忍不住捧住自己的臉頰。<br /><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/576bda565bf7f1063a7562094ab5167b_w30_h20.gif" width="30" height="20"> oO(我沒有蛀牙吧？)<br />想哭的衝動<img src="https://s.plurk.com/emoticons/random/5421081941d0283c63ac.png" class="emoticon" alt="(dice20)" rndnum="9"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘶……」從小腿傳來的灼熱感，讓她蹲了下去。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_18">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/a811403cf08401c0626ee26b5d05c611_w21_h35.png" width="21" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/b0cd5a5dc070c705ebf8814a909802c3_w18_h18.gif" width="18" height="18">  「莫非我也要變成海兔了嗎....」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/Helium_Ions" class="ex_link">▸【希里安=艾恩斯】</a>: 你看了一下你手背上感到灼熱的地方，發現上面多出了一劃有著奇怪花紋的紅色劃橫。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"><img src="https://s.plurk.com/emoticons/special/687d3fb2eb1e2208dcd0.png" class="emoticon" alt="(bzzz)" rndnum="3"><br />黑）脖子<br />藍）手背<br />紅）肚子<br />綠）大腿</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35"> 手臂隱約發熱著，不適感：<img src="https://s.plurk.com/emoticons/random/80a733a872c058570607.png" class="emoticon" alt="(dice20)" rndnum="11"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">所有人都發現自己感到灼熱的部位多出了一筆紅色的劃痕(形狀自訂)。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 驚訝到不敢說話。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/576bda565bf7f1063a7562094ab5167b_w30_h20.gif" width="30" height="20"> oO(壞壞牙齒長出來了嗎？好痛)<br />左臉十分疼痛，好不容易忍住沒有哭出來，只能淚眼汪汪的看著海兔　 <a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/1c0221dffc4c3d50d0c93fdd43272a6a_w20_h20.gif" width="20" height="20"> 「海兔先生為甚麼要這麼做？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"> 看著劃痕，驚嚇度<img src="https://s.plurk.com/emoticons/random/4b99448f9bafa31a9bd4.png" class="emoticon" alt="(dice20)" rndnum="4"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「這是靈咒，身上有靈咒的人就是被選中的參賽者喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/ace6124fbd75282841158e59de19afa2_w23_h35.png" width="23" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/76c7ec8deca7e6a26064a4c9f47b9e69_w20_h20.gif" width="20" height="20">  「怎麼會這樣…！？」看了一下自己的左手背。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「小姐！沒事吧？怎麼了？」安琪拉緊張的跪在伊莉莎白身旁，一旁的安德莉亞迅速的查看伊莉莎白捂著的地方，三人都被那印記嚇了一跳。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/e5fa35ae3d4b63c723f9565f283d95f5_w29_h37.gif" width="29" height="37">   <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19">  拉開手套看著手背。<br /><img class="emoticon_my" src="https://emos.plurk.com/3e3faaaafe056d63461e19ab36fdf2b1_w48_h48.png" width="48" height="48">  「是參什麼賽？我不記得有報過名。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/3d60a747e6dc3e17aa50a2c557996196_w48_h48.png" width="48" height="48"> 「這跟某個表演什麼的月世界好像啊。」突然冷靜。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19"> 總覺得奇怪的事情已經夠多了，對於劃痕的出現似乎也沒什麼好驚訝的，內心只有不斷上升的不滿。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「從現在開始，就要舉行自相殘殺的儀式了喔！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「怎麼樣，是不是很期待呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/46aac412bb8f6eaa797c7151ad8f9e13_w48_h48.png" width="48" height="48"> 「啊對了，沒有靈咒的魔法師你們可以隨便愛去哪玩就去哪玩，反正你們這輩子大概是跟魔法無緣了。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19"> 「期待個鬼。」覺得從這死兔子嘴裡說出來的沒一件好事。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0dc0a498765363afbafc2c9ceebc1c09_w21_h35.png" width="21" height="35"> 「？？？我有拒絕的權利吧。」平常已經夠衰了，怎麼還有更what的事情可以遇到啊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/6faa74312d4678e60aa93ebcd234aac5_w48_h48.jpg" width="48" height="48"> 「哈哈，聽起來真像是戰爭集中營時期那不合道德的生存淘汰賽呢，我以為那段歷史已經結束了。」<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/36e77c8b3dcce49661ca92df229e6d54_w48_h48.jpg" width="48" height="48"> 「那你有什麼本事讓我們都強制參加這種活動呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/825f90cee972e6c9532d86b06f638715_w48_h48.jpg" width="48" height="48"> 「這種事情我是不會遵守的。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 「人家沒有答應你要自相殘殺，混帳！」怒罵<img src="https://s.plurk.com/emoticons/random/4b99448f9bafa31a9bd4.png" class="emoticon" alt="(dice20)" rndnum="4"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/e4afb65df590c9f448e9b80b2aee7833_w48_h48.jpg" width="48" height="48"> 「只要打倒你就好了吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_19">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52898e88a65bc23bab0731e2e587b530_w18_h35.png" width="18" height="35"> 「？？為什麼要自相殘殺？」看起來一點都不期待，並且有些慌張地看著身上發熱的地方所浮現的印記。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_16">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/7be0d6dd45c530fa35085638196913c8_w48_h48.png" width="48" height="48">  「聽上去很危險而且一點都不有趣。」微笑道，同時把大衣脫下、捲起袖子查看燒灼的位置。<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/f22543adbe236d0dac294760d22576ae_w48_h48.png" width="48" height="48">  「這個印記……力量來源八成是我們不見的魔法石吧，真是精打細算。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「連魔法都用不了是要怎麼跟我對抗呢？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/46aac412bb8f6eaa797c7151ad8f9e13_w48_h48.png" width="48" height="48"> 「現在，讓我教你們一招吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/c474f86421a255dfe459ecc0ad3983c9_w48_h48.png" width="48" height="48"> 「……！」查看自己疼痛的<img src="https://s.plurk.com/emoticons/special/19acfc995b239be115f8.png" class="emoticon" alt="(bzzz)" rndnum="2">，亦發現自己亦有所謂的靈咒。<br /><br class="double-br" />紅：手背｜黑：手臂｜藍：小腿｜綠：大腿<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/5ba94eae0acb45e882aefc2b27ccdff9_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/f576a52b8a922b1cdb184682c3ff2813_w20_h20.gif" width="20" height="20"> 「什麼？！自相殘殺？應該沒人想要參加這種比賽吧？不好意思，我要退出。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_22">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/cd59133f3e24416767d7129c50f77980_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/3e8b8179f8d7a387021b2d5b95acaf15_w20_h20.gif" width="20" height="20"> 「What the heck is this shitty sign??」覺得靈咒美觀度<img src="https://s.plurk.com/emoticons/random/5421081941d0283c63ac.png" class="emoticon" alt="(dice20)" rndnum="9"></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「只要說Book就可以召喚出我特別幫妳們準備的禁之魔法書喔。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/8ba85d5642938fc726f66a5b9dc39f62_w48_h48.png" width="48" height="48">    <img class="emoticon_my" src="https://emos.plurk.com/76c7ec8deca7e6a26064a4c9f47b9e69_w20_h20.gif" width="20" height="20">  靈咒？？？自相殘殺？？突然開始的英雄表演？？？真的不是整人實境秀？？？左右看尋找有沒有攝影機。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 「這個名詞跟某個表演魔法OX目錄有87趴像！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/9b4d11721e4dc87f38e7fdf26cf5cb7e_w48_h48.png" width="48" height="48"> 「優西西西西西，心動不如馬上行動，現在就試試看吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/fa93c76a942315737f807a49215970cc_w48_h48.jpg" width="48" height="48"> 「哇～我的靈咒在脖子上欸～好像項圈喔，哈哈。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/85c34178050b1dcbe4630d5517e7cab6_w48_h48.jpg" width="48" height="48"> 「BOOK?」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35"> 「⋯Book？」很疑惑但唸了。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_22">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/cd59133f3e24416767d7129c50f77980_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/3e8b8179f8d7a387021b2d5b95acaf15_w20_h20.gif" width="20" height="20"> 「擅自幫我紋身還紋個難看的，有問過我的意見嗎？」每天好好保養的皮膚出現了瑕疵覺得有點煩躁。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_21">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/95c6158fe060e19a2fcd60dd3984f753_w48_h48.png" width="48" height="48">  :BooK.</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/karasumadaiya" class="ex_link">▸【烏丸 大彌】</a>: <a href="https://www.plurk.com/bei_dangan" class="ex_link">▸【羅莎=哈里斯】</a>:<br />手上的靈咒發光，接著一本魔法書就這樣突兀的出現在了你的手上。<br /><a href="https://images.plurk.com/71XJZtnliN8OEUEgBB6ZQE.jpg" class="ex_link pictureservices" rel="nofollow"><img src="https://images.plurk.com/mx_71XJZtnliN8OEUEgBB6ZQE.jpg" alt="https://images.plurk.com/71XJZtnliN8OEUEgBB6ZQE.jpg" height="48"></a></div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_19">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52898e88a65bc23bab0731e2e587b530_w18_h35.png" width="18" height="35"> 「Book...？」跟著唸了</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/amomoDRoc" class="ex_link">▸【拿倫】</a>: <a href="https://www.plurk.com/re_fish" class="ex_link">▸【雪莉=伊莎貝拉】</a>: 你們的手上也跟著出現了魔法書</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/8ed82c9d1e4a6236994dcffd87ba8caf_w48_h48.png" width="48" height="48">  「……BOOK。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/417ff7f0402092e7a1727fb2a2ffcd7f_w48_h48.png" width="48" height="48"> 「超酷的耶人家也要試試看！ＢＯOＫU！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_19">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52898e88a65bc23bab0731e2e587b530_w18_h35.png" width="18" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/5a21687f382b1bef7e87e764c3ac13e5_w20_h20.png" width="20" height="20"> 「這是什麼？」小心地查看手上突然出現的書。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/DanganronpaZero00" class="ex_link">▸【七天的魔法使】</a>:<br /><img class="emoticon_my" src="https://emos.plurk.com/0d0d5c3783de228c1cd723b3c4c29070_w23_h35.png" width="23" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/a6df4c68b455a1f5e607071441416105_w19_h19.gif" width="19" height="19"> 「哇喔，超酷的。」唸稿般的捧讀。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/52b5f4426031e7ab71b017ee2cd65b09_w21_h35.png" width="21" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/1c0221dffc4c3d50d0c93fdd43272a6a_w20_h20.gif" width="20" height="20">  <img class="emoticon_my" src="https://emos.plurk.com/a12495741fddfc31b68a906a19344e37_w20_h20.gif" width="20" height="20"> 「Book。」<br />看著陸續有人拿到了書，委屈巴巴地跟著喊。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_18">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/a811403cf08401c0626ee26b5d05c611_w21_h35.png" width="21" height="35">   <img class="emoticon_my" src="https://emos.plurk.com/65a5c610cdfd6d173097230a0c27e6de_w20_h20.gif" width="20" height="20">  「不可？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/SpsuagWi2Xt1930" class="ex_link">▸【亞森=羅苹】</a>: 出現了魔法書。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/1068645b7c3f1449a919af2384025b65_w48_h48.jpg" width="48" height="48"> 聽著覺得這一切都有點莫名其妙。<br /><img class="emoticon_my" src="https://emos.plurk.com/6355f9d6f5093bb769f230e4a6c2cce6_w20_h35.png" width="20" height="35">  <img class="emoticon_my" src="https://emos.plurk.com/3e8b8179f8d7a387021b2d5b95acaf15_w20_h20.gif" width="20" height="20"> 怎麼辦啊......看了一下從奇怪的事情開始就一直緊抓著自己不放的弟弟，是不是也該試試看呢......。<br /><img class="emoticon_my" src="https://emos.plurk.com/1068645b7c3f1449a919af2384025b65_w48_h48.jpg" width="48" height="48"> 「Book。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/3e3faaaafe056d63461e19ab36fdf2b1_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/36236caa176ec929bf564030adfea5d6_w19_h19.jpeg" width="19" height="19">  「Ok let&#39;s gimme the book.」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/e62f2e255cb9770bb2ada6f3725cb577_w25_h35.png" width="25" height="35">  看了看書的內容。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們試著打開魔法書後，發現裡面有一顆頗大的魔法石，應該可以用來發動不少次魔法，除此之外，書中還有<a href="https://docs.google.com/spreadsheets/d/1dUoEXJV9gZeXsyUcdLXEA1QgAf5P6LLZwuncL17Wjz8/edit#gid=463104272" class="ex_link" rel="nofollow" target="_blank">參會者名單</a>。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_16">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/260e6119d830ae3a4865eaf79763f4f6_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/33cd397db5c6e01e856ab792226b1170_w26_h26.gif" width="26" height="26">  不想念可疑的咒語但對書完全沒有抵抗能力。<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/27b99f191e7d9f1f3f87cfc281d9743f_w48_h48.png" width="48" height="48">  「Book。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/ca35d2fdb076318f134eb97e84e60de7_w48_h48.jpg" width="48" height="48"> 「這個可以拿來蓋泡麵嗎？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/825f90cee972e6c9532d86b06f638715_w48_h48.jpg" width="48" height="48"> 「既然有了這個，那就可以對付你了吧。」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/c616304301bf5f77ffbe79e06a579e57_w48_h48.png" width="48" height="48">  <img class="emoticon_my" src="https://emos.plurk.com/65a5c610cdfd6d173097230a0c27e6de_w20_h20.gif" width="20" height="20"><br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/744eb406dbb63ffcda1556e71f9a8942_w48_h48.png" width="48" height="48"> 「BOOK.」先拿書看看能不能理解目前的情況。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 「原來大家都是魔法師！？」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/746a5de860f61ae8de6deb650916f01a_w48_h48.png" width="48" height="48"> 「為什麼要騙我不跟我說啊！還把我的大麻青蛙丟掉！」突然憤怒</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/825f90cee972e6c9532d86b06f638715_w48_h48.jpg" width="48" height="48"> 拿出了書中的魔法石，接著她拿出了一張抄寫的捲軸。<br /><img class="emoticon_my" src="https://emos.plurk.com/825f90cee972e6c9532d86b06f638715_w48_h48.jpg" width="48" height="48"> 「看我的，燃燒之手！」</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/f486a5dcf5d41d3f7bf710849f6f62a6_w48_h48.png" width="48" height="48">  手、消失了？一陣驚嚇說不出話來。<br /><br class="double-br" /><img class="emoticon_my" src="https://emos.plurk.com/b25b050fe32100d51fb3a838f7771e1f_w48_h48.png" width="48" height="48">  「星空，退後點。」稱職的經紀人站上前。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_20">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/f9b203f5be39c17ebd222e325dbe819e_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/36236caa176ec929bf564030adfea5d6_w19_h19.jpeg" width="19" height="19">  o0（這些超社會級稱號是誰編的，快尷尬死。）看一輪就合起書本。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><img class="emoticon_my" src="https://emos.plurk.com/5cde7a7e8c5efa194185775604b10d6a_w48_h48.png" width="48" height="48">   「book……」<br /><img class="emoticon_my" src="https://emos.plurk.com/a444a2a205689e632ffd3873d9e87fca_w48_h48.png" width="48" height="48">   <img class="emoticon_my" src="https://emos.plurk.com/c0343d84fe54e03d359621f02167d86e_w12_h12.png" width="12" height="12">  「附近好多人都在名單上，不過只有這些人？紐約那麼大的說！」為什麼自己也在上面呀，明明又不是多強的魔法使。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">一陣火焰在女子的手上燃燒，一瞬間閃花了你們的雙眼。</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">◆◇◆◇◆</div>
+</div>
+</div></div><!--EOS-->
+
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"><a href="https://www.plurk.com/p/pdhyjg" class="ex_link plink" rel="nofollow" target="_blank">後續</a></div>
+</div>
+</div></div><!--EOS-->
+
+</body>
